@@ -5272,13 +5272,13 @@ background-color : rgba(0, 0, 0, 0);
 opacity : 0.5;
 }
 .carousel-control.left {
-background-image : linear-gradient(to right, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 1.0E-4) 100%);
+background-image : linear-gradient(to right, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.00010));
 background-repeat : repeat-x;
 }
 .carousel-control.right {
 right : 0;
 left : auto;
-background-image : linear-gradient(to right, rgba(0, 0, 0, 1.0E-4) 0, rgba(0, 0, 0, 0.5) 100%);
+background-image : linear-gradient(to right, rgba(0, 0, 0, 0.00010) 0, rgba(0, 0, 0, 0.5));
 background-repeat : repeat-x;
 }
 .carousel-control:focus, .carousel-control:hover {

@@ -98,7 +98,7 @@ cursor : pointer;
 button[disabled], html input[disabled] {
 cursor : default;
 }
-button:-moz-focus-inner, input:-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
 padding : 0;
 border : 0;
 }
@@ -109,7 +109,7 @@ input[type="checkbox"], input[type="radio"] {
 box-sizing : border-box;
 padding : 0;
 }
-input[type="number"]:-webkit-inner-spin-button, input[type="number"]:-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
 height : auto;
 }
 input[type="search"] {
@@ -2242,17 +2242,17 @@ border-color : #66afe9;
 outline : 0;
 box-shadow : 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
 }
-.form-control:-moz-placeholder {
+.form-control::-moz-placeholder {
 color : #999;
 opacity : 1;
 }
 .form-control:-ms-input-placeholder {
 color : #999;
 }
-.form-control:-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder {
 color : #999;
 }
-.form-control:-ms-expand {
+.form-control::-ms-expand {
 background-color : transparent;
 border : 0;
 }

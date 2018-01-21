@@ -99,7 +99,7 @@ cursor : pointer;
 button[disabled], html input[disabled] {
 cursor : default;
 }
-button::-moz-focus-inner, input::-moz-focus-inner {
+button:-moz-focus-inner, input:-moz-focus-inner {
 padding : 0;
 border : 0;
 }

@@ -34,19 +34,15 @@
       function process()
       {
       var number1, number2, number3, n1, n2, n3, sum, average, product;
-
       number1 = document.forms["myform"].elements["num1"].value;
       number2 = document.forms["myform"].elements["num2"].value;
       number3 = document.forms["myform"].elements["num3"].value;
-
       n1 = parseInt(number1);
       n2 = parseInt(number2);
       n2 = parseInt(number3);
-
       sum = n1 + n2 + n3;
       average = sum / 3;
       product = n1 * n2 * n3;
-
       document.forms["myform"].elements["result"].value = ("The inputted numbers are " + n1 + ", " + n2 + "\nThe sum of the integers is " + sum); }
     </script>
   </head>
@@ -110,22 +106,22 @@
       <p>
         <form name="myform">
           <table>
-          <tr>
-          <td>First number:</td>
-          <td><input type="text" name="num1" size="10"></td>
-          </tr>
-          <tr>
-          <td>Second number:</td>
-          <td><input type="text" name="num2" size="10"></td>
-          </tr>
-          <tr>
-          <td>Third number:</td>
-          <td><input type="text" name="num3" size="10"></td>
-          </tr>
+            <tr>
+              <td>First number:</td>
+              <td><input type="text" name="num1" size="10"></td>
+            </tr>
+            <tr>
+              <td>Second number:</td>
+              <td><input type="text" name="num2" size="10"></td>
+            </tr>
+            <tr>
+              <td>Third number:</td>
+              <td><input type="text" name="num3" size="10"></td>
+            </tr>
           </table>
-          <br>Results:
-          <textarea rows="6" cols="40" name="result">
-          </textarea>
+          <br>
+          Results:
+          <textarea rows="6" cols="40" name="result"></textarea>
           <br><br>
           <input type="button" onclick="process()" value="SUBMIT">
           <input type="reset" value="RESET">

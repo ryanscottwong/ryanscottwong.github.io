@@ -36,7 +36,7 @@
     // This script defines a ready handler that defines a click event handler for the button, such that clicking the button fades the results in the textarea.
       $(document).ready(function(){
           $("#button").click(function(){
-              $("#div1").fadeTo("slow", 0.15);
+              $("#result").fadeTo("slow", 0.15);
           });
       });
     </script>
@@ -116,15 +116,13 @@
               <td><input type="text" id="num5" size="10"></td>
             </tr>
           </table>
-          <br>Results: <textarea rows="4" cols="40" id="result"> </textarea>
+          <br>Results: <textarea rows="4" cols="40" id="result" style="background-color:yellow;"> </textarea>
           <br><br>
           <input type="button" onclick="process()" value="Submit">
           <input type="reset" value="Reset">
           <input type="button" id="button" value="Fade">
           <br><br>
         </form>
-        <div id="div1" style="width:80px;height:80px;background-color:red;"></div>
-        <br>
     </div>
 
     <footer class="footer">

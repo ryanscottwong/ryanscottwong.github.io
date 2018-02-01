@@ -34,25 +34,25 @@
     /* This script inputs three integers via form text boxes and displays the sum, average, and product of the three integers, and the smallest and largest of the three integers. */
       function process()
       {
-      var number1, number2, number3, n1, n2, n3, sum, average, smallest, largest;
-      number1 = document.forms["myform"].elements["num1"].value;
-      number2 = document.forms["myform"].elements["num2"].value;
-      number3 = document.forms["myform"].elements["num3"].value;
-      n1 = parseInt(number1);
-      n2 = parseInt(number2);
-      n3 = parseInt(number3);
-      sum = n1 + n2 + n3;
-      average = (sum / 3).toFixed(2);
-      product = n1 * n2 * n3;
-      smallest = Math.min(n1, n2, n3);
-      largest = Math.max(n1, n2, n3);
-      document.forms["myform"].elements["result"].value = ("The inputted numbers are " +
-        n1 + ", " + n2 + ", " + n3 + ".\n" +
-        "The sum of the integers is " + sum + ".\n" +
-        "The average of the integers is " + average + ".\n" +
-        "The product of the integers is " + product + ".\n" +
-        "The smallest integer is " + smallest + ".\n" +
-        "The largest integer is " + largest + ".\n"
+        var number1, number2, number3, n1, n2, n3, sum, average, smallest, largest;
+        number1 = document.forms["myform"].elements["num1"].value;
+        number2 = document.forms["myform"].elements["num2"].value;
+        number3 = document.forms["myform"].elements["num3"].value;
+        n1 = parseInt(number1);
+        n2 = parseInt(number2);
+        n3 = parseInt(number3);
+        sum = n1 + n2 + n3;
+        average = (sum / 3).toFixed(2);
+        product = n1 * n2 * n3;
+        smallest = Math.min(n1, n2, n3);
+        largest = Math.max(n1, n2, n3);
+        document.forms["myform"].elements["result"].value = ("The inputted numbers are " +
+          n1 + ", " + n2 + ", " + n3 + ".\n" +
+          "The sum of the integers is " + sum + ".\n" +
+          "The average of the integers is " + average + ".\n" +
+          "The product of the integers is " + product + ".\n" +
+          "The smallest integer is " + smallest + ".\n" +
+          "The largest integer is " + largest + ".\n"
       ); }
     </script>
   </head>

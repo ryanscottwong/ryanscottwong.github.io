@@ -29,21 +29,31 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
     <script>
     /* This script inputs three integers via form text boxes and displays the sum, average, and product of the three integers, and the smallest and largest of the three integers. */
       function process()
       {
-      var number1, number2, number3, n1, n2, n3, sum, average, product;
+      var number1, number2, number3, n1, n2, n3, sum, average, smallest, largest;
       number1 = document.forms["myform"].elements["num1"].value;
       number2 = document.forms["myform"].elements["num2"].value;
       number3 = document.forms["myform"].elements["num3"].value;
       n1 = parseInt(number1);
       n2 = parseInt(number2);
-      n2 = parseInt(number3);
+      n3 = parseInt(number3);
       sum = n1 + n2 + n3;
-      average = sum / 3;
+      average = (sum / 3).toFixed(2);
       product = n1 * n2 * n3;
-      document.forms["myform"].elements["result"].value = ("The inputted numbers are " + n1 + ", " + n2 + "\nThe sum of the integers is " + sum); }
+      smallest = Math.min(n1, n2, n3);
+      largest = Math.max(n1, n2, n3);
+      document.forms["myform"].elements["result"].value = ("The inputted numbers are " +
+        n1 + ", " + n2 + ", " + n3 + ".\n" +
+        "The sum of the integers is " + sum + ".\n" +
+        "The average of the integers is " + average + ".\n" +
+        "The product of the integers is " + product + ".\n" +
+        "The smallest integer is " + smallest + ".\n" +
+        "The largest integer is " + largest + ".\n"
+      ); }
     </script>
   </head>
 
@@ -107,21 +117,19 @@
         <form name="myform">
           <table>
             <tr>
-              <td>Number 1:</td>
+              <td>Number 1:&nbsp;</td>
               <td><input type="text" name="num1" size="10"></td>
             </tr>
             <tr>
-              <td>Number 2:</td>
+              <td>Number 2:&nbsp;</td>
               <td><input type="text" name="num2" size="10"></td>
             </tr>
             <tr>
-              <td>Number 3:</td>
+              <td>Number 3:&nbsp;</td>
               <td><input type="text" name="num3" size="10"></td>
             </tr>
           </table>
-          <br>
-          Results:
-          <textarea rows="6" cols="40" name="result"></textarea>
+          <br> Results: <textarea rows="7" cols="40" name="result"> </textarea>
           <br><br>
           <input type="button" onclick="process()" value="SUBMIT">
           <input type="reset" value="RESET">

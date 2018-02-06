@@ -35,32 +35,27 @@
     <!-- the following script is needed for jquery validation of input -->
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
     <script>
-    // This script shows/hides instructions.
+      /* JQuery for validation displays error message if form input is not a number */
       $(document).ready(function(){
-        /* $("#button").click(function(){
-          $("#panel").slideToggle("slow");
-        }); // end show/hide */
-
-        // JQuery for validation displays error message if form input is not a number
-        $("#myform").validate({
-      	  // Rules for each input item
-      	  rules:
-      	  {
-            num: { required: true, number: true, min: 0, max: 10}
-      	  }
-      	});
+          $("#myform").validate({
+        	  // Rules for each input item
+        	  rules: 
+        	  {
+        		    num: { required: true, number: true, min: 0, max: 10}             
+        	  }
+          });	  
       });
 
       function process() {
         if ($("#myform").valid()) {
-          // define variables
+          // define variables	
           var numb;
-          // get input number value from form using getElementById
+          // get input number value from form using getElementById           
           numb = document.getElementById("num").value;
-          document.forms["myform"].elements["comment"].value =  ( numb + " is a number between 0 and 10" );
+          document.forms["myform"].elements["comment"].value =  ( numb + "  is a number between 0 and 10" );       
         }
       }
-    </script>
+      </script>
   </head>
 
   <body>
@@ -114,11 +109,11 @@
         <h1>CNIT 133 Homework 3 Functions</h1>
       </div>
       <p class="lead">Part 1 - Student grades</p>
-      <input type="button" id="button" value="Click to show/hide instructions">
+      <!--<input type="button" id="button" value="Click to show/hide instructions">
       <br><br>
       <div id="panel" style="display:none;">
         <p>The following webpage contains the heading, Student Grades, and uses a script that inputs a student's homework average, mid-term exam score, final exam score, and ACR (all as integers).</p>
-      </div>
+      </div> -->
           <table class="table table-striped" style="width:33%">
             <tr>
               <td>90-100</td>
@@ -146,33 +141,8 @@
             <p class="n">
               <input type="text" id="num" name="num" size="10" autofocus><br>
             </p>
-            <input type="button"  onclick="process()" value="SUBMIT">
+            <input type="button" onclick="process()" value="SUBMIT">
             <input type="reset" value="RESET" onClick="window.location.reload();"><br><br>
             Comment: <input type="text" readonly name="comment" size="30">
           </form>
-    </div>
-
-    <footer class="footer">
-      <div class="container">
-        <p class="text-muted"><a href="mailto:rwong116@mail.ccsf.edu">Ryan Wong</a>
-        <script>
-        var dateModified = document.lastModified;
-        mydate = dateModified.slice(0,16);
-        document.write("updated " + mydate);
-        </script>
-        <a href="https://validator.w3.org/check?uri=referer"><img style="border:0;width:31px;height:31px" src="https://www.w3.org/html/logo/img/mark-word-icon.png" alt="Valid HTML5"></a>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer?profile=css3"><img style="border:0;width:22px;height:31px" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="Valid CSS"></a>
-      </p>
-      </div>
-    </footer>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/3.3/assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="https://getbootstrap.com/docs/3.3/assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
 </html>

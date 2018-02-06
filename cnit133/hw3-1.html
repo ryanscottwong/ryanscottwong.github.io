@@ -41,34 +41,24 @@
           $("#panel").slideToggle("slow");
         }); // end show/hide
 
-    /* JQuery for validation
-    displays error message if form input is not a number
-    */
+        // JQuery for validation displays error message if form input is not a number
         $("#myform").validate({
-    	  // Rules for each input item
-    	  rules:
-    	  {
-    		num: { required: true, number: true, min: 0, max: 10}
+      	  // Rules for each input item
+      	  rules:
+      	  {
+      		    num: { required: true, number: true, min: 0, max: 10}
+      	  }
+      	});
+      });
 
-    	  }
-    	});
-    });
-
-
-    function process() {
-    if ($("#myform").valid()) {
-
-      // define variables
-
-      var numb;
-
-      // get input number value from form using getElementById
-
-         numb = document.getElementById("num").value;
-         document.forms["myform"].elements["comment"].value =  ( numb + "  is a number between 0 and 10" );
-
-      }
-
+      function process() {
+        if ($("#myform").valid()) {
+          // define variables
+          var numb;
+          // get input number value from form using getElementById
+          numb = document.getElementById("num").value;
+          document.forms["myform"].elements["comment"].value =  ( numb + "  is a number between 0 and 10" );
+        }
       }
     </script>
   </head>

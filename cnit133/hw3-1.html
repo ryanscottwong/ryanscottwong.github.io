@@ -30,7 +30,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="js/hw2-3.js"></script>
+    <!-- <script src="js/hw2-3.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
     // This script shows/hides instructions.
@@ -40,6 +40,32 @@
         }); // end show/hide
       }); // end ready
     </script>
+    <!-- the following script is needed for jquery validation of input -->
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+
+<script>
+// JQuery for validation displays error message if form input is not a number
+  $(document).ready(function(){
+    $("#myform").validate({
+	     // Rules for each input item
+	     rules:
+        {
+          num: { required: true, number: true, min: 0, max: 100 }
+	      }
+	   });
+   });
+
+   function process() {
+     if ($("#myform").valid()) {
+       // define variables
+       var numb;
+       // get input number value from form using getElementById
+       numb = document.getElementById("num").value;
+       document.forms["myform"].elements["comment"].value =  ( numb + "  is a number between 0 and 100" );
+     }
+   }
+</script>
   </head>
 
   <body>
@@ -98,7 +124,7 @@
       <div id="panel" style="display:none;">
         <p>The following webpage contains the heading, Student Grades, and uses a script that inputs a student's homework average, mid-term exam score, final exam score, and ACR (all as integers).</p>
       </div>
-          <table class="table table-striped" style="width:50%">
+          <table class="table table-striped" style="width:33%">
             <tr>
               <td>90-100</td>
               <td>A</td>
@@ -120,12 +146,15 @@
               <td>F</td>
             </tr>
           </table>
-          <!-- <br>Results: <textarea rows="4" cols="40" id="result" style="background-color:yellow;"> </textarea>
-          <br><br>
-          <input type="button" onclick="process()" value="Submit">
-          <input type="reset" value="Reset">
-          <input type="button" id="button" value="Fade">
-          <br><br> -->
+          <form id="myform" name="myform">
+            <label for="num">Enter input: </label>
+            <p class="n">
+              <input type="text" id="num" name="num" size="10" autofocus><br>
+            </p>
+            <input type="button"  onclick="process()" value="SUBMIT">
+            <input type="reset" value="RESET" onClick="window.location.reload();"><br><br>
+            Comment: <input type="text" readonly name="comment" size="30">
+          </form>
     </div>
 
     <footer class="footer">

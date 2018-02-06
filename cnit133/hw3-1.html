@@ -35,16 +35,22 @@
     <!-- the following script is needed for jquery validation of input -->
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
     <script>
-      /* JQuery for validation displays error message if form input is not a number */
       $(document).ready(function(){
-          $("#myform").validate({
-        	  // Rules for each input item
-        	  rules: 
-        	  {
-        		    num: { required: true, number: true, min: 0, max: 10}             
-        	  }
-          });	  
-      });
+        
+        // This script shows/hides instructions.
+        $("#button").click(function(){
+          $("#panel").slideToggle("slow");
+        }); // end show/hide
+        
+        /* JQuery for validation displays error message if form input is not a number */
+        $("#myform").validate({
+      	  // Rules for each input item
+      	  rules: 
+      	  {
+      		    num: { required: true, number: true, min: 0, max: 10}             
+      	  }
+        });	// end validation
+      }); end ready
 
       function process() {
         if ($("#myform").valid()) {
@@ -109,11 +115,11 @@
         <h1>CNIT 133 Homework 3 Functions</h1>
       </div>
       <p class="lead">Part 1 - Student grades</p>
-      <!--<input type="button" id="button" value="Click to show/hide instructions">
+      <input type="button" id="button" value="Click to show/hide instructions">
       <br><br>
       <div id="panel" style="display:none;">
         <p>The following webpage contains the heading, Student Grades, and uses a script that inputs a student's homework average, mid-term exam score, final exam score, and ACR (all as integers).</p>
-      </div> -->
+      </div>
           <table class="table table-striped" style="width:33%">
             <tr>
               <td>90-100</td>

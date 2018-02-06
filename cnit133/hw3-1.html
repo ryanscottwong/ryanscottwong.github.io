@@ -38,7 +38,7 @@
       $(document).ready(function(){
         
         // This script shows/hides instructions.
-        $("#show").click(function(){
+        $("#button").click(function(){
           $("#panel").slideToggle("slow");
         }); // end show/hide
         
@@ -50,7 +50,7 @@
       		    num: { required: true, number: true, min: 0, max: 10}             
       	  }
         });	// end validation
-      }); end ready
+      }); //end ready
 
       function process() {
         if ($("#myform").valid()) {
@@ -115,7 +115,7 @@
         <h1>CNIT 133 Homework 3 Functions</h1>
       </div>
       <p class="lead">Part 1 - Student grades</p>
-      <input type="button" id="show" value="Click to show/hide instructions">
+      <input type="button" id="button" value="Click to show/hide instructions">
       <br><br>
       <div id="panel" style="display:none;">
         <p>The following webpage contains the heading, Student Grades, and uses a script that inputs a student's homework average, mid-term exam score, final exam score, and ACR (all as integers).</p>

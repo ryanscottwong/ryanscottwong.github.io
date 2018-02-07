@@ -46,17 +46,17 @@
         $("#myform").validate({
       	  // Rules for each input item
       	  rules: {
-    		    num: { required: true, number: true, min: 0, max: 100},
-            num1: { required: true, number: true, min: 0, max: 100}
+    		    hwAvg: { required: true, number: true, min: 0, max: 100},
+            midExam: { required: true, number: true, min: 0, max: 100}
           },
-          messages: { 
-           num:  "Please enter a number between 0 and 100",
-           num1: "Please enter a number between 0 and 100",
+          messages: {
+           hwAvg:  "Please enter a number between 0 and 100",
+           midExam: "Please enter a number between 0 and 100",
           },
         errorPlacement: function(error, element) {
           if ( element.is(":text")) {
             error.appendTo( element.parent());
-          } 
+          }
           else {
             error.insertAfter(element);
           }
@@ -66,13 +66,13 @@
 
   function process() {
     if ($("#myform").valid()) {
-      // define variables	
-      var numb;
-      // get input number value from form using getElementById   
-         numb = document.getElementById("num").value;
-         numb1 = document.getElementById("num1").value;
-         document.forms["myform"].elements["comment"].value =  ("First number is " + numb 
-          + " and is between 0 and 100 \nSecond number is " + numb1 + " and is between 0 and 100");   
+      // define variables
+      var hwAvgb;
+      // get input number value from form using getElementById
+         hwAvgb = document.getElementById("hwAvg").value;
+         hwAvgb = document.getElementById("hwAvg").value;
+         document.forms["myform"].elements["comment"].value =  ("First number is " + hwAvgb
+          + " and is between 0 and 100 \nSecond number is " + hwAvgb + " and is between 0 and 100");
       }
     }
 </script>
@@ -159,11 +159,11 @@
           <form id="myform" name="myform">
             <p>
               Enter first number:<br>
-              <input type="text" id="num" name="num" size="10" autofocus><br>
+              <input type="text" id="hwAvg" name="hwAvg" size="10" autofocus><br>
             </p>
             <p>
               Enter second number:<br>
-              <input type="text" id="num1" name="num1" size="10"><br>
+              <input type="text" id="midExam" name="midExam" size="10"><br>
             </p>
             <input type="button"  onclick="process()" value="Submit">
             <input type="reset" value="Reset" onClick="window.location.reload();"><br><br>

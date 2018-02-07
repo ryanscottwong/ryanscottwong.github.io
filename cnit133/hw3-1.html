@@ -71,15 +71,16 @@
   function process() {
     if ($("#myform").valid()) {
       // define variables
-      var hwAvgb, midExamb, finalExamb, acrb;
+      var hwAvgb, midExamb, finalExamb, acrb, finalAvg;
       // get input number value from form using getElementById
          hwAvgb = document.getElementById("hwAvg").value;
          midExamb = document.getElementById("midExam").value;
          finalExamb = document.getElementById("finalExam").value;
          acrb = document.getElementById("acr").value;
-         document.forms["myform"].elements["comment"].value = ("Homework average score is " + hwAvgb + 
+         finalAvg = (.5 * hwAvgb) + (.2 * midExamb) + (.2 * finalExamb) + (.1 * acrb);
+         document.forms["myform"].elements["comment"].value = (/*"Homework average score is " + hwAvgb + 
          "\nMidterm score is " + midExamb + "\nFinal exam score is " + finalExamb + 
-         "\nACR score is " + acrb);
+         "\nACR score is " + acrb + */"Final average is " + finalAvg);
       }
     }
 </script>

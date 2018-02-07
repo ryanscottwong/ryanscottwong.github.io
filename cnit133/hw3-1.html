@@ -77,7 +77,9 @@
        midExamb = document.getElementById("midExam").value;
        finalExamb = document.getElementById("finalExam").value;
        acrb = document.getElementById("acr").value;
+       // calculate final average
        finalAvg = parseInt((.5 * hwAvgb) + (.2 * midExamb) + (.2 * finalExamb) + (.1 * acrb));
+       // determine grade based on final average
        if (finalAvg >= 90) {
          grade = "A";
        }
@@ -93,10 +95,12 @@
        else {
          grade = "F"
        }
+       // display for grade F
        if (grade == "F") {
        document.forms["myform"].elements["comment"].value = ("Final average is " + finalAvg
        + "\nFinal grade is " + grade + "\nStudent must retake the course");
        }
+       // display for grades A-D
        else {
        document.forms["myform"].elements["comment"].value = ("Final average is " + finalAvg
        + "\nFinal grade is " + grade);

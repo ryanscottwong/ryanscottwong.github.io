@@ -78,16 +78,16 @@
          finalExamb = document.getElementById("finalExam").value;
          acrb = document.getElementById("acr").value;
          finalAvg = parseInt((.5 * hwAvgb) + (.2 * midExamb) + (.2 * finalExamb) + (.1 * acrb));
-         if (finalAvg => 90) {
+         if (finalAvg >= 90) {
            grade = "A";
          }
-         else if (finalAvg => 80) {
+         else if (finalAvg >= 80) {
            grade = "B";
          }
-         else if (finalAvg => 70) {
+         else if (finalAvg >= 70) {
            grade = "C";
          }
-         else if (finalAvg => 60) {
+         else if (finalAvg >= 60) {
            grade = "D";
          }
          else {

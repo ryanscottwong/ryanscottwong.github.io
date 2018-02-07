@@ -56,10 +56,10 @@
       function process() {
         if ($("#myform").valid()) {
           // define variables
-          var numb;
+          var hwAvgScore;
           // get input number value from form using getElementById
-          numb = document.getElementById("num").value;
-          document.forms["myform"].elements["comment"].value =  ( numb + "  is a number between 0 and 10" );
+          hwAvgScore = document.getElementById("hwAvg").value;
+          document.forms["myform"].elements["comment"].value =  ( hwAvgScore + "  is a number between 0 and 10" );
         }
       }
       </script>
@@ -145,8 +145,20 @@
           </table>
           <form id="myform" name="myform">
             <p>
-              Enter homework average score: 
-              <input type="text" id="num" name="num" size="10" autofocus><br>
+              Enter homework average score: <br>
+              <input type="text" id="hwAvg" name="hwAvg" size="10" autofocus><br>
+            </p>
+            <p>
+              Enter midterm exam score: <br>
+              <input type="text" id="num" name="num" size="10"><br>
+            </p>
+            <p>
+              Enter final exam score: <br>
+              <input type="text" id="num" name="num" size="10"><br>
+            </p>
+            <p>
+              Enter ACR score: <br>
+              <input type="text" id="num" name="num" size="10"><br>
             </p>
             <input type="button" onclick="process()" value="Submit">
             <input type="reset" value="Reset" onClick="window.location.reload();"><br><br>

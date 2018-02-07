@@ -48,10 +48,14 @@
       	  rules: {
     		    hwAvg: { required: true, number: true, min: 0, max: 100},
             midExam: { required: true, number: true, min: 0, max: 100}
+      		  finalExam: { required: true, number: true, min: 0, max: 100},
+        		acr: { required: true, number: true, min: 0, max: 100}
           },
           messages: {
            hwAvg:  "Please enter a number between 0 and 100",
            midExam: "Please enter a number between 0 and 100",
+           finalExam: "Please enter a number between 0 and 100",
+           acr: "Please enter a number between 0 and 100"
           },
         errorPlacement: function(error, element) {
           if ( element.is(":text")) {
@@ -71,8 +75,12 @@
       // get input number value from form using getElementById
          hwAvgb = document.getElementById("hwAvg").value;
          midExamb = document.getElementById("midExam").value;
+         finalExamb = document.getElementById("finalExam").value;
+         acrb = document.getElementById("acr").value;
          document.forms["myform"].elements["comment"].value =  ("Homework average score is " + hwAvgb
-          + " and is between 0 and 100 \nMidterm score is " + midExamb + " and is between 0 and 100");
+          + " and is between 0 and 100 \nMidterm score is " + midExamb + " and is between 0 and 100\n"
+          + "Final exam score is " + finalExamb + " and is between 0 and 100 \n"
+          + "ACR score is " + acrb + " and is between 0 and 100");
       }
     }
 </script>
@@ -164,6 +172,14 @@
             <p>
               Enter midterm score:<br>
               <input type="text" id="midExam" name="midExam" size="10"><br>
+            </p>
+            <p>
+              Enter final exam score:<br>
+              <input type="text" id="finalExam" name="finalExam" size="10"><br>
+            </p>
+            <p>
+              Enter ACR score:<br>
+              <input type="text" id="acr" name="acr" size="10"><br>
             </p>
             <input type="button"  onclick="process()" value="Submit">
             <input type="reset" value="Reset" onClick="window.location.reload();"><br><br>

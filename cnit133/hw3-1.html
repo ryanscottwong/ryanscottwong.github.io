@@ -44,31 +44,53 @@
 
         /* JQuery for validation displays error message if form input is not a number */
         $("#myform").validate({
-      	  // Rules for each input item
-      	  rules:
-      	  {
-      		  hwAvg: { required: true, number: true, min: 0, max: 100},
-            midExam: { required: true, number: true, min: 0, max: 100},
-            finalExam: { required: true, number: true, min: 0, max: 100},
-            ACR: { required: true, number: true, min: 0, max: 100}
-      	  }
-        });	// end validation
-        
-      }); // end ready
 
-      function process() {
-        if ($("#myform").valid()) {
-          // define variables
-          var hwAvgScore, midExamScore, finalExamScore, ACRScore;
-          // get input number value from form using getElementById
-          hwAvgScore = document.getElementById("hwAvg").value;
-          midExamScore = document.getElementById("midExam").value;
-          finalExamScore = document.getElementById("finalExam").value;
-          ACRScore = document.getElementById("ACR").value;
-          document.forms["myform"].elements["comment"].value =  ( hwAvgScore + "  is a number between 0 and 100" );
-        }
-      }
-      </script>
+	  // Rules for each input item
+	  rules: 
+            {
+		num: { required: true, number: true, min: 0, max: 10},
+                num1: { required: true, number: true, min: 0, max: 10}
+            },
+
+messages: { 
+
+ num:  "Please enter a number between 0 and 10",
+ num1: "Please enter a number between 0 and 10",
+
+         },
+
+errorPlacement: function(error, element) {
+if ( element.is(":text")) {
+error.appendTo( element.parent());
+} else {
+error.insertAfter(element);
+}
+}
+	});	  
+    });
+
+
+function process() {
+
+if ($("#myform").valid()) {
+
+  // define variables	
+
+  var numb;
+
+  // get input number value from form using getElementById
+     
+     numb = document.getElementById("num").value;
+     numb1 = document.getElementById("num1").value;
+
+     document.forms["myform"].elements["comment"].value =  ("First number is " + numb + " and is between 0 and 10 \nSecond number is " + 
+                                       numb1 + " and is between 0 and 10" );
+ 
+  }
+
+  }
+
+</script>
   </head>
 
   <body>
@@ -150,26 +172,15 @@
             </tr>
           </table>
           <form id="myform" name="myform">
-            <p>
-              Enter homework average score: <br>
-              <input type="text" id="hwAvg" name="hwAvg" size="10" autofocus><br>
-            </p>
-            <p>
-              Enter midterm exam score: <br>
-              <input type="text" id="num" name="num" size="10"><br>
-            </p>
-            <p>
-              Enter final exam score: <br>
-              <input type="text" id="num" name="num" size="10"><br>
-            </p>
-            <p>
-              Enter ACR score: <br>
-              <input type="text" id="num" name="num" size="10"><br>
-            </p>
-            <input type="button" onclick="process()" value="Submit">
-            <input type="reset" value="Reset" onClick="window.location.reload();"><br><br>
-            Comment: <input type="text" readonly name="comment" size="30">
-          </form>
+<label for="num">Enter first number: </label><p class="n"><input type="text" id="num" name="num" size="10" autofocus><br>
+</p>
+<label for="num1">Enter second number: </label><p class="n"><input type="text" id="num1" name="num1" size="10" autofocus><br>
+</p>
+<input type="button"  onclick="process()" value="SUBMIT">
+<input type="reset" value="RESET" onClick="window.location.reload();"><br><br>
+
+Comment: <textarea name="comment" readonly cols="60" rows="5"></textarea>
+</form>
     </div>
 
     <footer class="footer">

@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+  // salesperson name tooltip
+  $( function() {
+    $( document ).tooltip();
+  } );
+
   // This script shows/hides instructions.
   $("#button").click(function(){
     $("#panel").slideToggle("slow");

@@ -72,7 +72,7 @@
          numb = document.getElementById("num").value;
          numb1 = document.getElementById("num1").value;
          document.forms["myform"].elements["comment"].value =  ("First number is " + numb 
-          + " and is between 0 and 10 \nSecond number is " + numb1 + " and is between 0 and 10");   
+          + " and is between 0 and 100 \nSecond number is " + numb1 + " and is between 0 and 100");   
       }
     }
 </script>
@@ -157,12 +157,12 @@
             </tr>
           </table>
           <form id="myform" name="myform">
-            <label for="num">Enter first number: </label>
             <p class="n">
+              Enter first number:<br>
               <input type="text" id="num" name="num" size="10" autofocus><br>
             </p>
-            <label for="num1">Enter second number: </label>
             <p class="n">
+              Enter second number:<br>
               <input type="text" id="num1" name="num1" size="10" autofocus><br>
             </p>
             <input type="button"  onclick="process()" value="Submit">

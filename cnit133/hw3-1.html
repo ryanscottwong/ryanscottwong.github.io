@@ -52,10 +52,10 @@
         		acr: { required: true, number: true, min: 0, max: 100}
           },
           messages: {
-           hwAvg:  "Please enter a number between 0 and 100",
-           midExam: "Please enter a number between 0 and 100",
-           finalExam: "Please enter a number between 0 and 100",
-           acr: "Please enter a number between 0 and 100"
+             hwAvg: "Please enter a number between 0 and 100",
+             midExam: "Please enter a number between 0 and 100",
+             finalExam: "Please enter a number between 0 and 100",
+             acr: "Please enter a number between 0 and 100"
           },
         errorPlacement: function(error, element) {
           if ( element.is(":text")) {
@@ -71,7 +71,7 @@
   function process() {
     if ($("#myform").valid()) {
       // define variables
-      var hwAvgb;
+      var hwAvgb, midExamb, finalExamb, acrb;
       // get input number value from form using getElementById
          hwAvgb = document.getElementById("hwAvg").value;
          midExamb = document.getElementById("midExam").value;

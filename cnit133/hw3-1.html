@@ -77,7 +77,7 @@
          midExamb = document.getElementById("midExam").value;
          finalExamb = document.getElementById("finalExam").value;
          acrb = document.getElementById("acr").value;
-         finalAvg = (.5 * hwAvgb) + (.2 * midExamb) + (.2 * finalExamb) + (.1 * acrb).toFixed(0);
+         finalAvg = parseInt((.5 * hwAvgb) + (.2 * midExamb) + (.2 * finalExamb) + (.1 * acrb));
          if (finalAvg => 90) {
            grade = "A";
          }

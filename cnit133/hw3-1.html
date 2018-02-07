@@ -78,9 +78,9 @@
          finalExamb = document.getElementById("finalExam").value;
          acrb = document.getElementById("acr").value;
          finalAvg = (.5 * hwAvgb) + (.2 * midExamb) + (.2 * finalExamb) + (.1 * acrb);
-         document.forms["myform"].elements["comment"].value = (/*"Homework average score is " + hwAvgb + 
-         "\nMidterm score is " + midExamb + "\nFinal exam score is " + finalExamb + 
-         "\nACR score is " + acrb + */"Final average is " + finalAvg);
+         document.forms["myform"].elements["comment"].value = (/*"Homework average is " + hwAvgb +
+         "\nMidterm score is " + midExamb + "\nFinal exam score is " + finalExamb +
+         "\nACR is " + acrb + */"Final average is " + finalAvg);
       }
     }
 </script>
@@ -166,7 +166,7 @@
           </table>
           <form id="myform" name="myform">
             <p>
-              Enter homework average score:<br>
+              Enter homework average:<br>
               <input type="text" id="hwAvg" name="hwAvg" size="10" autofocus><br>
             </p>
             <p>
@@ -178,7 +178,7 @@
               <input type="text" id="finalExam" name="finalExam" size="10"><br>
             </p>
             <p>
-              Enter ACR score:<br>
+              Enter ACR:<br>
               <input type="text" id="acr" name="acr" size="10"><br>
             </p>
             <input type="button"  onclick="process()" value="Submit">

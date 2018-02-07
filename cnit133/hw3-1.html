@@ -47,7 +47,10 @@
       	  // Rules for each input item
       	  rules:
       	  {
-      		  hwAvg: { required: true, number: true, min: 0, max: 100}
+      		  hwAvg: { required: true, number: true, min: 0, max: 100},
+            midExam: { required: true, number: true, min: 0, max: 100},
+            finalExam: { required: true, number: true, min: 0, max: 100},
+            ACR: { required: true, number: true, min: 0, max: 100}
       	  }
         });	// end validation
         
@@ -56,10 +59,13 @@
       function process() {
         if ($("#myform").valid()) {
           // define variables
-          var hwAvgScore;
+          var hwAvgScore, midExamScore, finalExamScore, ACRScore;
           // get input number value from form using getElementById
           hwAvgScore = document.getElementById("hwAvg").value;
-          document.forms["myform"].elements["comment"].value =  ( hwAvgScore + "  is a number between 0 and 10" );
+          midExamScore = document.getElementById("midExam").value;
+          finalExamScore = document.getElementById("finalExam").value;
+          ACRScore = document.getElementById("ACR").value;
+          document.forms["myform"].elements["comment"].value =  ( hwAvgScore + "  is a number between 0 and 100" );
         }
       }
       </script>

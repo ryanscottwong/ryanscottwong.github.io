@@ -47,7 +47,7 @@
       	  // Rules for each input item
       	  rules: {
     		    hwAvg: { required: true, number: true, min: 0, max: 100},
-            midExam: { required: true, number: true, min: 0, max: 100}
+            midExam: { required: true, number: true, min: 0, max: 100},
       		  finalExam: { required: true, number: true, min: 0, max: 100},
         		acr: { required: true, number: true, min: 0, max: 100}
           },
@@ -77,7 +77,7 @@
          midExamb = document.getElementById("midExam").value;
          finalExamb = document.getElementById("finalExam").value;
          acrb = document.getElementById("acr").value;
-         document.forms["myform"].elements["comment"].value =  ("Homework average score is " + hwAvgb + 
+         document.forms["myform"].elements["comment"].value = ("Homework average score is " + hwAvgb + 
          " and is between 0 and 100 \nMidterm score is " + midExamb + " and is between 0 and 100\n" + 
          "Final exam score is " + finalExamb + " and is between 0 and 100 \n" + 
          "ACR score is " + acrb + " and is between 0 and 100");
@@ -140,7 +140,7 @@
       <input type="button" id="button" value="Click to show/hide instructions">
       <br><br>
       <div id="panel" style="display:none;">
-        <p>The following webpage contains the heading, Student Grades, and uses a script that inputs a student's homework average, mid-term exam score, final exam score, and ACR (all as integers).</p>
+        <p>The following webpage contains the heading, Student Grades, and uses a script that inputs a student's homework average, midterm exam score, final exam score, and ACR (all as integers).</p>
       </div>
           <table class="table table-striped" style="width:33%">
             <tr>

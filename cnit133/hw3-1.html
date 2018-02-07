@@ -44,52 +44,37 @@
 
         /* JQuery for validation displays error message if form input is not a number */
         $("#myform").validate({
+      	  // Rules for each input item
+      	  rules: {
+    		    num: { required: true, number: true, min: 0, max: 100},
+            num1: { required: true, number: true, min: 0, max: 100}
+          },
+          messages: { 
+           num:  "Please enter a number between 0 and 100",
+           num1: "Please enter a number between 0 and 100",
+          },
+        errorPlacement: function(error, element) {
+          if ( element.is(":text")) {
+            error.appendTo( element.parent());
+          } 
+          else {
+            error.insertAfter(element);
+          }
+        }
+      });	// end validation
+    }); // document ready
 
-	  // Rules for each input item
-	  rules: 
-            {
-		num: { required: true, number: true, min: 0, max: 10},
-                num1: { required: true, number: true, min: 0, max: 10}
-            },
-
-messages: { 
-
- num:  "Please enter a number between 0 and 10",
- num1: "Please enter a number between 0 and 10",
-
-         },
-
-errorPlacement: function(error, element) {
-if ( element.is(":text")) {
-error.appendTo( element.parent());
-} else {
-error.insertAfter(element);
-}
-}
-	});	  
-    });
-
-
-function process() {
-
-if ($("#myform").valid()) {
-
-  // define variables	
-
-  var numb;
-
-  // get input number value from form using getElementById
-     
-     numb = document.getElementById("num").value;
-     numb1 = document.getElementById("num1").value;
-
-     document.forms["myform"].elements["comment"].value =  ("First number is " + numb + " and is between 0 and 10 \nSecond number is " + 
-                                       numb1 + " and is between 0 and 10" );
- 
-  }
-
-  }
-
+  function process() {
+    if ($("#myform").valid()) {
+      // define variables	
+      var numb;
+      // get input number value from form using getElementById   
+         numb = document.getElementById("num").value;
+         numb1 = document.getElementById("num1").value;
+         document.forms["myform"].elements["comment"].value =  ("First number is " + numb 
+          + " and is between 0 and 10 \nSecond number is " + numb1 + " and is between 0 and 10");   
+      }
+    }
 </script>
   </head>
 
@@ -172,15 +157,18 @@ if ($("#myform").valid()) {
             </tr>
           </table>
           <form id="myform" name="myform">
-<label for="num">Enter first number: </label><p class="n"><input type="text" id="num" name="num" size="10" autofocus><br>
-</p>
-<label for="num1">Enter second number: </label><p class="n"><input type="text" id="num1" name="num1" size="10" autofocus><br>
-</p>
-<input type="button"  onclick="process()" value="SUBMIT">
-<input type="reset" value="RESET" onClick="window.location.reload();"><br><br>
-
-Comment: <textarea name="comment" readonly cols="60" rows="5"></textarea>
-</form>
+            <label for="num">Enter first number: </label>
+            <p class="n">
+              <input type="text" id="num" name="num" size="10" autofocus><br>
+            </p>
+            <label for="num1">Enter second number: </label>
+            <p class="n">
+              <input type="text" id="num1" name="num1" size="10" autofocus><br>
+            </p>
+            <input type="button"  onclick="process()" value="Submit">
+            <input type="reset" value="Reset" onClick="window.location.reload();"><br><br>
+            Comment: <textarea name="comment" readonly cols="60" rows="5"></textarea>
+          </form>
     </div>
 
     <footer class="footer">

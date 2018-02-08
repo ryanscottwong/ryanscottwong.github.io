@@ -1,15 +1,15 @@
 $(document).ready(function(){
 
-  /* salesperson name tooltip
+  // salesperson name tooltip
   $( function() {
     $('[data-toggle="tooltip"]').tooltip();
-  } ); */
+  } );
 
   /* JQuery for validation displays error message if form input is not a number */
   $("#myform").validate({
     // Rules for each input item
     rules: {
-      item1: {required: true, number: true, min: 0},
+      item1: {required: true, number: true},
       item2: {required: true, number: true, min: 0},
       item3: {required: true, number: true, min: 0},
       item4: {required: true, number: true, min: 0}

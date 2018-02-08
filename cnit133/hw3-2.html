@@ -32,9 +32,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- the following script is needed for jquery validation of input -->
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
-    <!-- the following script is needed for jquery tooltip -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/hw3-2.js"></script>
+    <script src="js/hw3-1.js"></script>
   </head>
 
   <body>
@@ -84,76 +82,59 @@
           <a href="hw3-3.html">Part 3</a> -
           <a href="hw3-4.html">Part 4</a>
         </p>
-        <!-- <h1>CNIT 133 Homework 3 Functions</h1> -->
+        <h1>CNIT 133 Homework 3 Functions</h1>
       </div>
       <p class="lead">Part 2 - Sales commission, JQuery UI tooltip</p>
-      <form name="my_form">
-        <p>
-          Enter salesperson's name: 
-        </p>
-        <p>
-          <input name="sp" size="20" data-toggle="tooltip" title="Please make sure that the salesperson's name is spelled correctly" autofocus>
-        </p>
-
-        <p>
-          Enter the number of items sold for each item number:
-        </p>
-        <p>
-          Item 1: <input type="text" id="item1" name="item1" size="8"><br>
-        </p>
-        <p>
-          Item 2: <input type="text" id="item2" name="item2" size="8"><br>
-        </p>
-        <p>
-          Item 3: <input type="text" id="item3" name="item3" size="8"><br>
-        </p>
-        <p>
-          Item 4: <input type="text" id="item4" name="item4" size="8"><br>
-        </p>
-          <input type="button" value="Submit">
-          <input type="reset" value="Reset"><br><br>
-
-        <table class="table table-striped" style="width:50%">
-          <tr>
-            <th>Item #</th>
-            <th>Price</th>
-            <th>Number Sold</th>
-            <th>Total</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>$239.99</td>
-            <td><input type="text" class="t" name="int_item1"></td>
-            <td><input type="text"  class="t" name="total_item1"></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>$129.75</td>
-            <td><input type="text" class="t" name="int_item2"></td>
-            <td><input type="text"  class="t" name="total_item2"></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>$99.95</td>
-            <td><input type="text" class="t" name="int_item3"></td>
-            <td><input type="text"  class="t" name="total_item3"></td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>$350.89</td>
-            <td><input type="text" class="t" name="int_item4"></td>
-            <td><input type="text" class="t" name="total_item4"></td>
-          </tr>
-          <tr>
-            <td colspan="3">Total Amount Sold:</td>
-            <td><input type="text" class="t" name="final_total"></td>
-          </tr>
-          <tr>
-            <td colspan="3">Total Weekly Earnings:</td>
-            <td><input type="text"  class="t" name="salary"></td>
-          </tr>
-        </table>
-      </form>
+      <input type="button" id="button" value="Click to show/hide instructions">
+      <br><br>
+      <div id="panel" style="display:none;">
+        <p>The following webpage contains the heading "Student Grades" and uses a script that inputs a student's homework average, midterm exam score, final exam score, and ACR (all as integers).</p>
+      </div>
+          <table class="table table-striped" style="width:33%">
+            <tr>
+              <td>90-100</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>80-89</td>
+              <td>B</td>
+            </tr>
+            <tr>
+              <td>70-79</td>
+              <td>C</td>
+            </tr>
+            <tr>
+              <td>60-69</td>
+              <td>D</td>
+            </tr>
+            <tr>
+              <td>0-59</td>
+              <td>F</td>
+            </tr>
+          </table>
+          <form id="myform" name="myform">
+            <p>
+              Enter homework average:<br>
+              <input type="text" id="hwAvg" name="hwAvg" size="10" autofocus><br>
+            </p>
+            <p>
+              Enter midterm score:<br>
+              <input type="text" id="midExam" name="midExam" size="10"><br>
+            </p>
+            <p>
+              Enter final exam score:<br>
+              <input type="text" id="finalExam" name="finalExam" size="10"><br>
+            </p>
+            <p>
+              Enter ACR:<br>
+              <input type="text" id="acr" name="acr" size="10"><br>
+            </p>
+            <input type="button"  onclick="process()" value="Submit">
+            <input type="reset" value="Reset" onClick="window.location.reload();"><br><br>
+            <p>
+                <textarea name="comment" readonly cols="40" rows="3"></textarea>
+            </p>
+          </form>
     </div>
 
     <footer class="footer">

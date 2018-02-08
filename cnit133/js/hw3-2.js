@@ -1,7 +1,9 @@
 $(document).ready(function(){
 
   // salesperson name tooltip
-  $('[data-toggle="tooltip"]').tooltip(); 
+  $( function() {
+    $('[data-toggle="tooltip"]').tooltip();
+  } ); 
 
   // This script shows/hides instructions.
   $("#button").click(function(){

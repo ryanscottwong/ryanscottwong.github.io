@@ -23,5 +23,16 @@ $(document).ready(function(){
       error.insertAfter(element);
     }
   });	// end validation
-  
 }); // document ready
+
+function process() {
+  if ($("#salesperson_total").valid()) {
+    // define variables
+    var item1b, item2b, item3b, item4;
+    // get input number value from form using getElementById
+    item1b = document.getElementById("item1").value;
+    item2b = document.getElementById("item2").value;
+    item3b = document.getElementById("item3").value;
+    item4b = document.getElementById("item4").value;
+  }
+}

@@ -1,10 +1,5 @@
 $(document).ready(function(){
 
-  // salesperson name tooltip
-  $( function() {
-    $('[data-toggle="tooltip"]').tooltip();
-  });
-
   /* JQuery for validation displays error message if form input is not a number */
   $("#my_form").validate({
     // Rules for each input item

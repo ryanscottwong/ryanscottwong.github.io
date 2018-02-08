@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   /* JQuery for validation displays error message if form input is not a number */
-  $("#myform").validate({
+  $("#my_form").validate({
     // Rules for each input item
     rules: {
       item1: {required: true, number: true, min: 0},

@@ -39,39 +39,11 @@ $(document).ready(function(){
 function process() {
 if ($("#myform").valid()) {
 // define variables
-var item1b, item2b, item3b, item4, finalAvg, grade;
+var item1b, item2b, item3b, item4;
 // get input number value from form using getElementById
  item1b = document.getElementById("item1").value;
  item2b = document.getElementById("item2").value;
  item3b = document.getElementById("item3").value;
  item4b = document.getElementById("item4").value;
- // calculate final average
- finalAvg = parseInt((.5 * hwAvgb) + (.2 * midExamb) + (.2 * finalExamb) + (.1 * acrb));
- // determine grade based on final average
- if (finalAvg >= 90) {
-   grade = "A";
- }
- else if (finalAvg >= 80) {
-   grade = "B";
- }
- else if (finalAvg >= 70) {
-   grade = "C";
- }
- else if (finalAvg >= 60) {
-   grade = "D";
- }
- else {
-   grade = "F"
- }
- // display for grade F
- if (grade == "F") {
- document.forms["myform"].elements["comment"].value = ("Final average is " + finalAvg
- + "\nFinal grade is " + grade + "\nStudent must retake the course");
- }
- // display for grades A-D
- else {
- document.forms["myform"].elements["comment"].value = ("Final average is " + finalAvg
- + "\nFinal grade is " + grade);
- }
 }
 }

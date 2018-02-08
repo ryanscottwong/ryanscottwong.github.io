@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+  // salesperson name tooltip
+  $( function() {
+    $('[data-toggle="tooltip"]').tooltip();
+  } );
+
   /* JQuery for validation displays error message if form input is not a number */
   $("#myform").validate({
     // Rules for each input item
@@ -23,16 +28,5 @@ $(document).ready(function(){
       error.insertAfter(element);
     }
   });	// end validation
+  
 }); // document ready
-
-function process() {
-if ($("#myform").valid()) {
-// define variables
-var item1b, item2b, item3b, item4;
-// get input number value from form using getElementById
- item1b = document.getElementById("item1").value;
- item2b = document.getElementById("item2").value;
- item3b = document.getElementById("item3").value;
- item4b = document.getElementById("item4").value;
-}
-}

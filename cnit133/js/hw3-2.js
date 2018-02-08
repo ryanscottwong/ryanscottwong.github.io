@@ -9,16 +9,16 @@ $(document).ready(function(){
   $("#myform").validate({
     // Rules for each input item
     rules: {
-      item1: { required: true, number: true, min: 0, max: 100},
-      item2: { required: true, number: true, min: 0, max: 100},
-      item3: { required: true, number: true, min: 0, max: 100},
-      item4: { required: true, number: true, min: 0, max: 100}
+      hwAvg: { required: true, number: true, min: 0, max: 100},
+      midExam: { required: true, number: true, min: 0, max: 100},
+      finalExam: { required: true, number: true, min: 0, max: 100},
+      acr: { required: true, number: true, min: 0, max: 100}
     },
     messages: {
-       item1: "Please enter a number between 0 and 100",
-       item2: "Please enter a number between 0 and 100",
-       item3: "Please enter a number between 0 and 100",
-       item4: "Please enter a number between 0 and 100"
+       hwAvg: "Please enter a number between 0 and 100",
+       midExam: "Please enter a number between 0 and 100",
+       finalExam: "Please enter a number between 0 and 100",
+       acr: "Please enter a number between 0 and 100"
     },
   errorPlacement: function(error, element) {
     if ( element.is(":text")) {
@@ -36,10 +36,10 @@ if ($("#myform").valid()) {
 // define variables
 var hwAvgb, midExamb, finalExamb, acrb, finalAvg, grade;
 // get input number value from form using getElementById
- hwAvgb = document.getElementById("item1").value;
- midExamb = document.getElementById("item2").value;
- finalExamb = document.getElementById("item3").value;
- acrb = document.getElementById("item4").value;
+ hwAvgb = document.getElementById("hwAvg").value;
+ midExamb = document.getElementById("midExam").value;
+ finalExamb = document.getElementById("finalExam").value;
+ acrb = document.getElementById("acr").value;
  // calculate final average
  finalAvg = parseInt((.5 * hwAvgb) + (.2 * midExamb) + (.2 * finalExamb) + (.1 * acrb));
  // determine grade based on final average

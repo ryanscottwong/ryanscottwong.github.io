@@ -1,14 +1,9 @@
 $(document).ready(function(){
 
-  // salesperson name tooltip
+  /* salesperson name tooltip
   $( function() {
     $('[data-toggle="tooltip"]').tooltip();
-  } ); 
-
-  // This script shows/hides instructions.
-  $("#button").click(function(){
-    $("#panel").slideToggle("slow");
-  }); // end show/hide
+  } ); */
 
   /* JQuery for validation displays error message if form input is not a number */
   $("#myform").validate({

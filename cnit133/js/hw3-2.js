@@ -27,8 +27,7 @@ $(document).ready(function(){
     else {
       error.insertAfter(element);
     }
-  }
-});	// end validation
+  });	// end validation
 }); // document ready
 
 function process() {

@@ -4,10 +4,10 @@ $(document).ready(function(){
   $("#my_form").validate({
     // Rules for each input item
     rules: {
-      item1: {required: true, number: true, min: 0},
-      item2: {required: true, number: true, min: 0},
-      item3: {required: true, number: true, min: 0},
-      item4: {required: true, number: true, min: 0}
+      item1: {required: true, number: true, min: 0, max: 100},
+      item2: {required: true, number: true, min: 0, max: 100},
+      item3: {required: true, number: true, min: 0, max: 100},
+      item4: {required: true, number: true, min: 0, max: 100}
     },
     messages: {
        item1: "Please enter a number",

@@ -20,6 +20,24 @@
     <!-- Custom styles for this template -->
     <link href="docs/sticky-footer-navbar.css" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
+    <link href="docs/sticky-footer-navbar.css" rel="stylesheet">
+
+    <style>
+      td {
+        text-align: right;
+      }
+      input {
+        text-align: right;
+      }
+      textarea {
+        border: 0;
+        overflow: auto;
+        resize: none;
+        text-align: right;
+      }
+    </style>
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="https://getbootstrap.com/docs/3.3/assets/js/ie-emulation-modes-warning.js"></script>
@@ -85,7 +103,7 @@
         <h1>CNIT 133 Homework 3 Functions</h1>
       </div>
       <p class="lead">Part 2 - Sales commission, JQuery UI tooltip</p>
-      
+
           <!-- Salesperson name -->
           <form id="salespersonform" name="salespersonform">
             <p>
@@ -110,7 +128,7 @@
             </p>
             <input type="button"  onclick="total()" value="Submit">
             <input type="reset" value="Reset" onClick="window.location.reload();"><br><br>
-            
+
             <!-- Item totals -->
             <table class="table table-striped">
               <tr>
@@ -122,26 +140,26 @@
               <tr>
                 <td>1</td>
                 <td>$239.99</td>
-                <td><textarea id="item1Sold" rows="1" readonly></textarea></td>
-                <td><textarea id="item1Total" rows="1" readonly></textarea></td>
+                <td><textarea id="item1SoldB" rows="1" readonly></textarea></td>
+                <td><textarea id="item1TotalB" rows="1" readonly></textarea></td>
               </tr>
               <tr>
                 <td>2</td>
                 <td>$129.75</td>
-                <td><textarea id="item2Sold" rows="1" readonly></textarea></td>
-                <td><textarea id="item2Total" rows="1" readonly></textarea></td>
+                <td><textarea id="item2SoldB" rows="1" readonly></textarea></td>
+                <td><textarea id="item2TotalB" rows="1" readonly></textarea></td>
               </tr>
               <tr>
                 <td>3</td>
                 <td>$99.95</td>
-                <td><textarea id="item3Sold" rows="1" readonly></textarea></td>
-                <td><textarea id="item3Total" rows="1" readonly></textarea></td>
+                <td><textarea id="item3SoldB" rows="1" readonly></textarea></td>
+                <td><textarea id="item3TotalB" rows="1" readonly></textarea></td>
               </tr>
               <tr>
                 <td>4</td>
                 <td>$350.89</td>
-                <td><textarea id="item4Sold" rows="1" readonly></textarea></td>
-                <td><textarea id="item4Total" rows="1" readonly></textarea></td>
+                <td><textarea id="item4SoldB" rows="1" readonly></textarea></td>
+                <td><textarea id="item4TotalB" rows="1" readonly></textarea></td>
               </tr>
           </form>
     </div>

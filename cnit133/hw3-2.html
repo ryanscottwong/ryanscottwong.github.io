@@ -24,7 +24,7 @@
     <link href="docs/sticky-footer-navbar.css" rel="stylesheet">
 
     <style>
-      td, th {
+      td.amount, th.amount {
         text-align: right;
       }
       input {
@@ -139,26 +139,34 @@
           <tr>
             <td>1</td>
             <td>$239.99</td>
-            <td><textarea id="item1SoldB" rows="1" readonly></textarea></td>
-            <td><textarea id="item1TotalB" rows="1" readonly></textarea></td>
+            <td class="amount"><textarea id="item1SoldB" rows="1" readonly></textarea></td>
+            <td class="amount"><textarea id="item1TotalB" rows="1" readonly></textarea></td>
           </tr>
           <tr>
             <td>2</td>
             <td>$129.75</td>
-            <td><textarea id="item2SoldB" rows="1" readonly></textarea></td>
-            <td><textarea id="item2TotalB" rows="1" readonly></textarea></td>
+            <td class="amount"><textarea id="item2SoldB" rows="1" readonly></textarea></td>
+            <td class="amount"><textarea id="item2TotalB" rows="1" readonly></textarea></td>
           </tr>
           <tr>
             <td>3</td>
             <td>$99.95</td>
-            <td><textarea id="item3SoldB" rows="1" readonly></textarea></td>
-            <td><textarea id="item3TotalB" rows="1" readonly></textarea></td>
+            <td class="amount"><textarea id="item3SoldB" rows="1" readonly></textarea></td>
+            <td class="amount"><textarea id="item3TotalB" rows="1" readonly></textarea></td>
           </tr>
           <tr>
             <td>4</td>
             <td>$350.89</td>
-            <td><textarea id="item4SoldB" rows="1" readonly></textarea></td>
-            <td><textarea id="item4TotalB" rows="1" readonly></textarea></td>
+            <td class="amount"><textarea id="item4SoldB" rows="1" readonly></textarea></td>
+            <td class="amount"><textarea id="item4TotalB" rows="1" readonly></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="3">Total amount sold:</td>
+            <td class="amount"><textarea id="amountSoldB" rows="1" readonly></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="3">Total weeky earnings:</td>
+            <td class="amount"><textarea id="weeklyEarningsB" rows="1" readonly></textarea></td>
           </tr>
         </table>
       </form>

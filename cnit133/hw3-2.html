@@ -136,9 +136,41 @@
             </p>
             <input type="button"  onclick="process()" value="Submit">
             <input type="reset" value="Reset" onClick="window.location.reload();"><br><br>
-            <p>
+            <!-- <p>
                 <textarea name="comment" readonly cols="40" rows="3"></textarea>
-            </p>
+            </p> -->
+            <!-- Item totals -->
+            <table class="table table-striped">
+              <tr>
+                <th>Item #</th>
+                <th>Price</th>
+                <th>Number sold</th>
+                <th>Total</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>$239.99</td>
+                <td><textarea id="item1soldb" rows="1" readonly></textarea></td>
+                <td><textarea id="item1total" rows="1" readonly></textarea></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>$129.75</td>
+                <td><textarea id="item2soldb" rows="1" readonly></textarea></td>
+                <td><textarea id="item2total" rows="1" readonly></textarea></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>$99.95</td>
+                <td><textarea id="item3soldb" rows="1" readonly></textarea></td>
+                <td><textarea id="item3total" rows="1" readonly></textarea></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>$350.89</td>
+                <td><textarea id="item4soldb" rows="1" readonly></textarea></td>
+                <td><textarea id="item4total" rows="1" readonly></textarea></td>
+              </tr>
           </form>
     </div>
 

@@ -9,16 +9,16 @@ $(document).ready(function(){
   $("#myform").validate({
     // Rules for each input item
     rules: {
-      item1sold: { required: true, number: true, min: 0, max: 100},
-      item2sold: { required: true, number: true, min: 0, max: 100},
-      item3sold: { required: true, number: true, min: 0, max: 100},
-      item4sold: { required: true, number: true, min: 0, max: 100}
+      hwAvg: { required: true, number: true, min: 0, max: 100},
+      midExam: { required: true, number: true, min: 0, max: 100},
+      finalExam: { required: true, number: true, min: 0, max: 100},
+      acr: { required: true, number: true, min: 0, max: 100}
     },
     messages: {
-       item1sold: "Please enter a number between 0 and 100",
-       item2sold: "Please enter a number between 0 and 100",
-       item3sold: "Please enter a number between 0 and 100",
-       item4sold: "Please enter a number between 0 and 100"
+       hwAvg: "Please enter a number between 0 and 100",
+       midExam: "Please enter a number between 0 and 100",
+       finalExam: "Please enter a number between 0 and 100",
+       acr: "Please enter a number between 0 and 100"
     },
   errorPlacement: function(error, element) {
     if ( element.is(":text")) {
@@ -34,14 +34,14 @@ $(document).ready(function(){
 function process() {
 if ($("#myform").valid()) {
 // define variables
-var item1soldb, item2soldb, item3soldb, item4soldb, finalAvg, grade;
+var hwAvgb, midExamb, finalExamb, acrb, finalAvg, grade;
 // get input number value from form using getElementById
- item1soldb = document.getElementById("item1sold").value;
- item2soldb = document.getElementById("item2sold").value;
- item3soldb = document.getElementById("item3sold").value;
- item4soldb = document.getElementById("item4sold").value;
+ hwAvgb = document.getElementById("hwAvg").value;
+ midExamb = document.getElementById("midExam").value;
+ finalExamb = document.getElementById("finalExam").value;
+ acrb = document.getElementById("acr").value;
  // calculate final average
- finalAvg = parseInt((.5 * item1soldb) + (.2 * item2soldb) + (.2 * item3soldb) + (.1 * item4soldb));
+ finalAvg = parseInt((.5 * hwAvgb) + (.2 * midExamb) + (.2 * finalExamb) + (.1 * acrb));
  // determine grade based on final average
  if (finalAvg >= 90) {
    grade = "A";

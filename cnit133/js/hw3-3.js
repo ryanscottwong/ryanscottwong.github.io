@@ -24,14 +24,13 @@ $(document).ready(function(){
 function celsius() {
   if ($("#myform").valid()) {
     // define variables
-    var tempF, tempC, tempCInt;
+    var tempF, tempC;
     // get input number value from form using getElementById
     tempF = document.getElementById("temp").value;
     // convert temperature to Fahrenheit
     tempC = (5 / 9) * (tempF - 32);
-    tempCInt = parseInt(tempC);
     // display Fahrenheit temperature
-    document.forms["myform"].elements["conversion"].value = ("Temperature in Celsius is " tempCInt);
+    document.forms["myform"].elements["conversion"].value = ("Temperature in Celsius is " tempC);
   }
 }
 
@@ -39,13 +38,12 @@ function celsius() {
 function fahrenheit() {
   if ($("#myform").valid()) {
     // define variables
-    var tempC, tempF, tempFInt;
+    var tempC, tempF;
     // get input number value from form using getElementById
     tempC = document.getElementById("temp").value;
     // convert temperature to Fahrenheit
     tempF = (9 / 5 * tempC) + 32;
-    tempFInt = parseInt(tempF);
     // display Fahrenheit temperature
-    document.forms["myform"].elements["conversion"].value = ("Temperature in Fahrenheit is " + tempFInt);
+    document.forms["myform"].elements["conversion"].value = ("Temperature in Fahrenheit is " + tempF);
   }
 }

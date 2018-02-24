@@ -15,7 +15,7 @@ function total()
   item2Total = (item2SoldB * item2Price).toFixed(2);
   item3Total = (item3SoldB * item3Price).toFixed(2);
   item4Total = (item4SoldB * item4Price).toFixed(2);
-  amountSold = (item1Total + item2Total + item3Total + item4Total).toFixed(2);
+  amountSold = (item1SoldB * item1Price + item2SoldB * item2Price + item3SoldB * item3Price + item4SoldB * item4Price).toFixed(2);
   weeklyEarnings = (salaryWeekly + (commissionRate * amountSold)).toFixed(2);
   document.getElementById("item1SoldB").value = (item1SoldB);
   document.getElementById("item2SoldB").value = (item2SoldB);

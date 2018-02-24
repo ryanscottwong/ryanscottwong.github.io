@@ -47,9 +47,20 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- the following script is needed for jquery validation of input -->
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+    <!-- Tooltip -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( document ).tooltip();
+    } );
+    </script>
+    <style>
+    label {
+      display: inline-block;
+      width: 5em;
+    }
+    </style>
     <script src="js/hw3-2.js"></script>
   </head>
 
@@ -104,9 +115,9 @@
       </div>
       <p class="lead">Part 2 - Sales commission, JQuery UI tooltip</p>
       <!-- Salesperson name -->
-      <form id="salespersonform" name="salespersonform">
+      <form id="salespersonForm" name="salespersonForm">
         <p>
-          Salesperson: <input type="text" id="salesperson" name="salesperson" size="25" autofocus><br><br>
+          Salesperson: <input type="text" id="salesperson" name="salesperson" size="25" title="Please make sure that the salesperson's name is spelled correctly" autofocus><br><br>
         </p>
       <!-- Items sold -->
       <p>

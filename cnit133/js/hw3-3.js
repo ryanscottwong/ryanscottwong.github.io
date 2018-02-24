@@ -4,10 +4,10 @@ $(document).ready(function(){
   $("#myform").validate({
     // Rules for each input item
     rules: {
-      acr: { required: true, number: true, min: 0 }
+      temp: { required: true, number: true, min: 0 }
     },
     messages: {
-      acr: "Please input a numeric value"
+      temp: "Please input a numeric value"
     },
     errorPlacement: function(error, element) {
       if ( element.is(":text")) {

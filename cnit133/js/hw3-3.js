@@ -4,7 +4,7 @@ $(document).ready(function(){
   $("#myform").validate({
     // Rules for each input item
     rules: {
-      temp: { required: true, number: true, min: 0 }
+      temp: { required: true, number: true }
     },
     messages: {
       temp: "Please input a numeric value"

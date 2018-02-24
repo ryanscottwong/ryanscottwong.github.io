@@ -85,33 +85,7 @@
         <h1>CNIT 133 Homework 3 Functions</h1>
       </div>
       <p class="lead">Part 2 - Sales commission, JQuery UI tooltip</p>
-      <!-- <input type="button" id="button" value="Click to show/hide instructions">
-      <br><br>
-      <div id="panel" style="display:none;">
-        <p>The following webpage contains the heading "Student Grades" and uses a script that inputs a student's homework average, midterm exam score, final exam score, and ACR (all as integers).</p>
-      </div>
-          <table class="table table-striped" style="width:33%">
-            <tr>
-              <td>90-100</td>
-              <td>A</td>
-            </tr>
-            <tr>
-              <td>80-89</td>
-              <td>B</td>
-            </tr>
-            <tr>
-              <td>70-79</td>
-              <td>C</td>
-            </tr>
-            <tr>
-              <td>60-69</td>
-              <td>D</td>
-            </tr>
-            <tr>
-              <td>0-59</td>
-              <td>F</td>
-            </tr>
-          </table> -->
+      
           <!-- Salesperson name -->
           <form id="salespersonform" name="salespersonform">
             <p>
@@ -123,22 +97,20 @@
           </p>
           <form id="myform" name="myform">
             <p>
-              Item 1: <input type="number" id="item1sold" name="item1sold" size="5"><br>
+              Item 1: <input type="number" id="item1Sold" name="item1Sold" size="5"><br>
             </p>
             <p>
-              Item 2: <input type="number" id="item2sold" name="item2sold" size="5"><br>
+              Item 2: <input type="number" id="item2Sold" name="item2Sold" size="5"><br>
             </p>
             <p>
-              Item 3: <input type="number" id="item3sold" name="item3sold" size="5"><br>
+              Item 3: <input type="number" id="item3Sold" name="item3Sold" size="5"><br>
             </p>
             <p>
-              Item 4: <input type="number" id="item4sold" name="item4sold" size="5"><br>
+              Item 4: <input type="number" id="item4Sold" name="item4Sold" size="5"><br>
             </p>
-            <input type="button"  onclick="process()" value="Submit">
+            <input type="button"  onclick="total()" value="Submit">
             <input type="reset" value="Reset" onClick="window.location.reload();"><br><br>
-            <!-- <p>
-                <textarea name="comment" readonly cols="40" rows="3"></textarea>
-            </p> -->
+            
             <!-- Item totals -->
             <table class="table table-striped">
               <tr>
@@ -150,26 +122,26 @@
               <tr>
                 <td>1</td>
                 <td>$239.99</td>
-                <td><textarea id="item1soldb" rows="1" readonly></textarea></td>
-                <td><textarea id="item1total" rows="1" readonly></textarea></td>
+                <td><textarea id="item1Sold" rows="1" readonly></textarea></td>
+                <td><textarea id="item1Total" rows="1" readonly></textarea></td>
               </tr>
               <tr>
                 <td>2</td>
                 <td>$129.75</td>
-                <td><textarea id="item2soldb" rows="1" readonly></textarea></td>
-                <td><textarea id="item2total" rows="1" readonly></textarea></td>
+                <td><textarea id="item2Sold" rows="1" readonly></textarea></td>
+                <td><textarea id="item2Total" rows="1" readonly></textarea></td>
               </tr>
               <tr>
                 <td>3</td>
                 <td>$99.95</td>
-                <td><textarea id="item3soldb" rows="1" readonly></textarea></td>
-                <td><textarea id="item3total" rows="1" readonly></textarea></td>
+                <td><textarea id="item3Sold" rows="1" readonly></textarea></td>
+                <td><textarea id="item3Total" rows="1" readonly></textarea></td>
               </tr>
               <tr>
                 <td>4</td>
                 <td>$350.89</td>
-                <td><textarea id="item4soldb" rows="1" readonly></textarea></td>
-                <td><textarea id="item4total" rows="1" readonly></textarea></td>
+                <td><textarea id="item4Sold" rows="1" readonly></textarea></td>
+                <td><textarea id="item4Total" rows="1" readonly></textarea></td>
               </tr>
           </form>
     </div>

@@ -24,7 +24,7 @@ $(document).ready(function(){
 function celsius() {
   if ($("#myform").valid()) {
     // define variables
-    var tempF, tempC;
+    var tempF, tempC, tempCInt;
     // get input number value from form using getElementById
     tempF = document.getElementById("temp").value;
     // convert temperature to Fahrenheit
@@ -39,7 +39,7 @@ function celsius() {
 function fahrenheit() {
   if ($("#myform").valid()) {
     // define variables
-    var tempC, tempF;
+    var tempC, tempF, tempFInt;
     // get input number value from form using getElementById
     tempC = document.getElementById("temp").value;
     // convert temperature to Fahrenheit

@@ -13,8 +13,8 @@ function total()
   item4Price = 350.89;
   item1Total = salaryWeekly + (commissionRate * item1SoldB * item1Price);
   item2Total = salaryWeekly + (commissionRate * item2SoldB * item2Price);
-  item2Total = salaryWeekly + (commissionRate * item3SoldB * item3Price);
-  item2Total = salaryWeekly + (commissionRate * item4SoldB * item4Price);
+  item3Total = salaryWeekly + (commissionRate * item3SoldB * item3Price);
+  item4Total = salaryWeekly + (commissionRate * item4SoldB * item4Price);
   document.getElementById("item1TotalB").value = (item1Total);
   document.getElementById("item2TotalB").value = (item2Total);
   document.getElementById("item3TotalB").value = (item3Total);

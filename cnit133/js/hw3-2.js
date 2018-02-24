@@ -11,10 +11,10 @@ function total()
   item2Price = 129.75;
   item3Price = 99.95;
   item4Price = 350.89;
-  item1Total = (salaryWeekly + (commissionRate * item1SoldB * item1Price)).toFixed(2);
-  item2Total = (salaryWeekly + (commissionRate * item2SoldB * item2Price)).toFixed(2);
-  item2Total = (salaryWeekly + (commissionRate * item3SoldB * item3Price)).toFixed(2);
-  item2Total = (salaryWeekly + (commissionRate * item4SoldB * item4Price)).toFixed(2);
+  item1Total = salaryWeekly + (commissionRate * item1SoldB * item1Price);
+  item2Total = salaryWeekly + (commissionRate * item2SoldB * item2Price);
+  item2Total = salaryWeekly + (commissionRate * item3SoldB * item3Price);
+  item2Total = salaryWeekly + (commissionRate * item4SoldB * item4Price);
   document.getElementById("item1TotalB").value = (item1Total);
   document.getElementById("item2TotalB").value = (item2Total);
   document.getElementById("item3TotalB").value = (item3Total);

@@ -28,9 +28,9 @@ function celsius() {
     // get input number value from form using getElementById
     tempF = document.getElementById("temp").value;
     // convert temperature to Fahrenheit
-    tempC = (5 / 9) * (tempF - 32);
+    tempC = parseInt((5 / 9) * (tempF - 32));
     // display Fahrenheit temperature
-    document.forms["myform"].elements["conversion"].value = ("Temperature in Celsius is " tempC);
+    document.forms["myform"].elements["conversion"].value = ("Temperature in Celsius is " str(tempC));
   }
 }
 
@@ -42,8 +42,8 @@ function fahrenheit() {
     // get input number value from form using getElementById
     tempC = document.getElementById("temp").value;
     // convert temperature to Fahrenheit
-    tempF = (9 / 5 * tempC) + 32;
+    tempF = parseInt((9 / 5 * tempC) + 32);
     // display Fahrenheit temperature
-    document.forms["myform"].elements["conversion"].value = ("Temperature in Fahrenheit is " + tempF);
+    document.forms["myform"].elements["conversion"].value = ("Temperature in Fahrenheit is " + str(tempF));
   }
 }

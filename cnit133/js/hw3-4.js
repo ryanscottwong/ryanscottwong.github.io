@@ -4,5 +4,5 @@ function question() {
   intB = Math.floor(Math.random() * 10);
   /* Display question */
   var element = document.getElementById("question");
-  element.innerHTML = ("What is " + intA + " times " + intB + "?");
+  element.innerHTML = ("What is ");
 }

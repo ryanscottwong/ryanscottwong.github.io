@@ -30,7 +30,7 @@ function celsius() {
     // convert temperature to Fahrenheit
     tempC = parseInt((5 / 9) * (tempF - 32));
     // display Fahrenheit temperature
-    document.forms["myform"].elements["conversion"].value = ("Temperature in Celsius is " tempC);
+    document.forms["myform"].elements["conversion"].value = ("Temperature in Celsius is " + tempC);
   }
 }
 

@@ -13,17 +13,15 @@ $(function () {
 function getAnswer() {
   // Get student's answer from form using getElementById
   studentAnswer = document.getElementById("answer").value;
+  // Clear student's answer
+  document.getElementById("answer").value = "";
   // Compare student's answer with answer
   if (studentAnswer != answer) {
     document.getElementById("message").style.color = "red";
     document.getElementById("message").innerHTML = ("No. Please try again.");
-    // Clear student's answer
-    document.getElementById("answer").value = "";
   }
   else {
     document.getElementById("message").style.color = "green";
     document.getElementById("message").innerHTML = ("Very good!");
-    // Clear student's answer
-    document.getElementById("answer").value = "";
   }
 }

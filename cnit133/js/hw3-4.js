@@ -1,8 +1,4 @@
-var answer = -1;
-
-function askQuestion() {
-  // Hide start button
-  document.getElementById("start").style.visibility = "hidden";
+$(function () {
   // Generate two random integers between 0 and 9
   intA = Math.floor(Math.random() * 10);
   intB = Math.floor(Math.random() * 10);
@@ -10,7 +6,7 @@ function askQuestion() {
   // Display question
   $("#question").text("How much is " + intA + " times " + intB + "?");
   return answer;
-}
+}); // end document ready
 
 function getAnswer(answer) {
   // Get student's answer from form using getElementById

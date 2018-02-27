@@ -17,9 +17,13 @@ function getAnswer() {
   if (studentAnswer != answer) {
     document.getElementById("message").style.color = "red";
     document.getElementById("message").innerHTML = ("No. Please try again.");
+    // Clear student's answer
+    document.getElementById("answer").value = "";
   }
   else {
     document.getElementById("message").style.color = "green";
     document.getElementById("message").innerHTML = ("Very good!");
+    // Clear student's answer
+    document.getElementById("answer").value = "";
   }
 }

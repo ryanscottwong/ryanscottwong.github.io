@@ -1,4 +1,6 @@
-$(function () {
+var answer = -1;
+
+$(function (answer) {
   // Generate two random integers between 0 and 9
   intA = Math.floor(Math.random() * 10);
   intB = Math.floor(Math.random() * 10);

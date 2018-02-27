@@ -23,10 +23,6 @@ function getAnswer() {
   else {
     document.getElementById("message").style.color = "green";
     document.getElementById("message").innerHTML = ("Very good!");
-    confirm();
+    confirm("Do you want another question?");
   }
-}
-
-function confirm() {
-  confirm("Do you want another question?");
 }

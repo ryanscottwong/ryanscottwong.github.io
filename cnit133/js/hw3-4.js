@@ -5,11 +5,13 @@ $(function () {
   answer = intA * intB;
   // Display question
   $("#question").text("How much is " + intA + " times " + intB + "?");
+  return answer
 }); // end document ready
 
-function getAnswer() {
+function getAnswer(answer) {
   // Get student's answer from form using getElementById
   studentAnswer = document.getElementById("answer").value;
   // Compare student's answer to answer
-  document.getElementById("message").innerHTML = ("Your answer is " + studentAnswer);
+  document.getElementById("message").innerHTML = ("The answer is " + answer + 
+    "\nYour answer is " + studentAnswer);
 }

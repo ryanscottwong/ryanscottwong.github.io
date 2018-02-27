@@ -13,11 +13,11 @@ function getAnswer(answer) {
   studentAnswer = document.getElementById("answer").value;
   // Compare student's answer to answer
   if (studentAnswer != answer) {
-    document.getElementById("answer").value = "";
-    document.getElementById("message").value = "No. Please try again.";
+    document.forms["myform"].elements["answer"].value = ("");
+    document.forms["myform"].elements["message"].value = ("No. Please try again.");
   }
   else {
-    document.getElementById("answer").value = "";
-    document.getElementById("message").value = "Very good!";
+    document.forms["myform"].elements["answer"].value = ("");
+    document.forms["myform"].elements["message"].value = ("Very good!");
   }
 }

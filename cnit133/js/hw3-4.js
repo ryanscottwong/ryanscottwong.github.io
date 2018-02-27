@@ -12,9 +12,11 @@ function getAnswer() {
   studentAnswer = document.getElementById("answer").value;
   // Compare student's answer with answer
   if (studentAnswer != 1) {
+    document.getElementById("message").style.color = "red";
     document.getElementById("message").innerHTML = ("No. Please try again.");
   }
   else {
+    document.getElementById("message").style.color = "green";
     document.getElementById("message").innerHTML = ("Very good!");
   }
   // Clear student's answer

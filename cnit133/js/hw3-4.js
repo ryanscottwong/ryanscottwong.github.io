@@ -24,7 +24,6 @@ function getAnswer() {
     document.getElementById("message").style.color = "green";
     document.getElementById("message").innerHTML = ("Very good!");
     setTimeout(confirmF, 3000);
-    confirmF();
   }
 }
 

@@ -11,6 +11,8 @@ $(function () {
 function getAnswer(answer) {
   // Get student's answer from form using getElementById
   studentAnswer = document.getElementById("answer").value;
+  // Clear student's answer
+  document.getElementById("answer").innerHTML = "";
   // Compare student's answer to answer
   document.getElementById("message").innerHTML = ("The answer is " + answer + 
     "; your answer is " + studentAnswer);

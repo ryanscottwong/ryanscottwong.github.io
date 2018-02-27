@@ -1,6 +1,6 @@
 var answer;
 
-$(function (answer) {
+$(function () {
   // Generate two random integers between 0 and 9
   intA = Math.floor(Math.random() * 10);
   intB = Math.floor(Math.random() * 10);
@@ -10,7 +10,7 @@ $(function (answer) {
   return answer;
 }); // end document ready
 
-function getAnswer(answer) {
+function getAnswer() {
   // Get student's answer from form using getElementById
   studentAnswer = document.getElementById("answer").value;
   // Compare student's answer with answer

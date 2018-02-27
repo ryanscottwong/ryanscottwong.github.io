@@ -1,5 +1,4 @@
 var answer;
-setTimeout(confirmF, 3000);
 
 $(function () {
   // Generate two random integers between 0 and 9
@@ -24,6 +23,7 @@ function getAnswer() {
   else {
     document.getElementById("message").style.color = "green";
     document.getElementById("message").innerHTML = ("Very good!");
+    setTimeout(confirmF, 3000);
     confirmF();
   }
 }

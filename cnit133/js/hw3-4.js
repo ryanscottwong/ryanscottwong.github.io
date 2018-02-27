@@ -11,5 +11,5 @@ function getAnswer() {
   // Get student's answer from form using getElementById
   studentAnswer = document.forms["myform"].elements["answer"].value;
   // Compare student's answer to answer
-  document.forms["myform"].elements["message"].value = ("Your answer is " + studentAnswer);
+  document.forms["myform"].elements["message"].value = ("Your answer is ");
 }

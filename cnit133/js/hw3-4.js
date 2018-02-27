@@ -5,7 +5,7 @@ $(function () {
   answer = intA * intB;
   // Display question
   $("#question").text("How much is " + intA + " times " + intB + "?");
-  return answer
+  return answer;
 }); // end document ready
 
 function getAnswer(answer) {

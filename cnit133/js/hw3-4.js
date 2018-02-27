@@ -21,7 +21,10 @@ function getAnswer() {
   else {
     document.getElementById("message").style.color = "green";
     document.getElementById("message").innerHTML = ("Very good!");
+    confirm();
   }
-  // Clear student's answer
-  document.getElementById("answer").innerHTML = "";
+}
+
+function confirm() {
+  confirm("Do you want another multiplication question?");
 }

@@ -13,5 +13,5 @@ function getAnswer(answer) {
   studentAnswer = document.getElementById("answer").value;
   // Compare student's answer to answer
   document.getElementById("message").innerHTML = ("The answer is " + answer + 
-    "\nYour answer is " + studentAnswer);
+    "; your answer is " + studentAnswer);
 }

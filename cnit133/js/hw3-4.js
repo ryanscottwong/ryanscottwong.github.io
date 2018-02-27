@@ -29,5 +29,9 @@ function getAnswer() {
 }
 
 function confirmF() {
-  confirm("Do you want another question?");
+  var txt;
+  var r = confirm("Do you want another question?");
+  if (r == true) {
+    location.reload();
+  }
 }

@@ -1,4 +1,4 @@
-var answer = -1;
+var answer;
 
 $(function (answer) {
   // Generate two random integers between 0 and 9

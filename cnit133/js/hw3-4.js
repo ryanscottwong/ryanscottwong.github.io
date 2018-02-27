@@ -5,15 +5,18 @@ $(function () {
   answer = intA * intB;
   // Display question
   $("#question").text("How much is " + intA + " times " + intB + "?");
-  return answer;
 }); // end document ready
 
-function getAnswer(answer) {
+function getAnswer() {
   // Get student's answer from form using getElementById
   studentAnswer = document.getElementById("answer").value;
+  // Compare student's answer with answer
+  if (studentAnswer != 1) {
+    document.getElementById("message").innerHTML = ("No. Please try again.");
+  }
+  else {
+    document.getElementById("message").innerHTML = ("Very good!");
+  }
   // Clear student's answer
   document.getElementById("answer").innerHTML = "";
-  // Compare student's answer to answer
-  document.getElementById("message").innerHTML = ("The answer is " + answer + 
-    "; your answer is " + studentAnswer);
 }

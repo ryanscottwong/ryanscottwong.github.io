@@ -4,10 +4,10 @@ $(document).ready(function(){
   $("#salespersonform").validate({
     // Rules for each input item
     rules: {
-      item1Sold: { required: true, number: true, min: 0, max: 100},
-      item2Sold: { required: true, number: true, min: 0, max: 100},
-      item3Sold: { required: true, number: true, min: 0, max: 100},
-      item4Sold: { required: true, number: true, min: 0, max: 100}
+      item1Sold: { required: true, number: true, min: 0},
+      item2Sold: { required: true, number: true, min: 0},
+      item3Sold: { required: true, number: true, min: 0},
+      item4Sold: { required: true, number: true, min: 0}
     },
     messages: {
        item1Sold: " Please enter a number greater than zero",

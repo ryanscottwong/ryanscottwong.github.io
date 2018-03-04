@@ -33,4 +33,7 @@ function confirmF() {
   if (r == true) {
     location.reload();
   }
+  else {
+    document.getElementById("message").innerHTML = ("Thank you for playing!");
+  }
 }

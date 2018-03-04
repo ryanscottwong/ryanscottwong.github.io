@@ -10,10 +10,10 @@ $(document).ready(function(){
       item4Sold: { required: true, number: true, min: 0, max: 100}
     },
     messages: {
-       item1Sold: "Please enter a number greater than zero",
-       item2Sold: "Please enter a number greater than zero",
-       item3Sold: "Please enter a number greater than zero",
-       item4Sold: "Please enter a number greater than zero"
+       item1Sold: " Please enter a number greater than zero",
+       item2Sold: " Please enter a number greater than zero",
+       item3Sold: " Please enter a number greater than zero",
+       item4Sold: " Please enter a number greater than zero"
     },
     errorPlacement: function(error, element) {
       if ( element.is(":text")) {

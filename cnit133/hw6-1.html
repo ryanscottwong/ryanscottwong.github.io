@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Objects exercise - math round">
+<title>Math Rounding</title>
+
+<script src="js/6-1.js"></script>
+
+<style>
+  body {background-color: #808080; color: white;}
+  .body { width: 415px; margin: 0px auto;}
+  div {font-size: 18px; font-weight: bold; color:yellow;}
+</style>
+
+</head>
+
+<body onload="document.getElementById('number').focus();">
+
+  <section class="body">
+
+    <h3>Math objects</h3>
+
+    <div id ="errOut"></div>
+
+      <form name="myForm">
+         Enter a number with at least 4 decimal positions: <br>
+         <input type="text" size="30" id="number">
+         <input type="button" value="Round" onclick="roundNumber()"><br>
+         <textarea name = "output" rows = "8" cols = "60" readonly>
+         </textarea><br>
+        <input type="reset" value="Reset" onClick="reset();">
+      </form>
+
+  </section>
+</body>
+</html>

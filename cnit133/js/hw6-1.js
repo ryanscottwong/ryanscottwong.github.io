@@ -15,22 +15,22 @@ function roundNumber() {
     var num = parseFloat(document.getElementById("number").value);
     document.myForm.output.value =
       "The entered number: " + num +
-      "\n rounded to the nearest integer using toFixed: " +
-         roundToIntegerToFixed( num ) +
+      "\n rounded to the nearest integer using Math.round: " +
+         roundToIntegerRound( num ) +
       "\n calculated square root rounded to the nearest integer: " +
          roundToSqrtToFixed( num ) +
       "\n rounded to the nearest tenth using toFixed: " +
          roundToTenthsToFixed( num ) +
-      "\n rounded to the nearest hundredth using toFixed: " +
-         roundToHundredthsToFixed( num ) +
-      "\n rounded to the nearest thousandth using toFixed: " +
-         roundToThousandthsToFixed( num );
+      "\n rounded to the nearest hundredth using Math.floor: " +
+         roundToHundredthsFloor( num ) +
+      "\n rounded to the nearest thousandth using Math.round: " +
+         roundToThousandthsRound( num );
   }
 }
 
 // round number to nearest integer
-function roundToIntegerToFixed( number ) {
-  return( number.toFixed(0) );
+function roundToIntegerRound( number ) {
+  return( Math.round( number) );
 }
 
 // square root of number rounded to nearest integer
@@ -40,17 +40,17 @@ function roundToSqrtToFixed( number ) {
 
 // round number to nearest tenth
 function roundToTenthsToFixed( number ) {
-  return( number.toFixed(1) );
+  return( number.toFixed(1));
 }
 
 // round number to nearest hundredth
-function roundToHundredthsToFixed( number ) {
-  return( number.toFixed(2) );
+function roundToHundredthsFloor( number ) {
+  return( Math.floor( number * 100 + .5 ) / 100 );
 }
 
 // round number to nearest thousandth
-function roundToThousandthsToFixed( number ) {
-  return( number.toFixed(3) );
+function roundToThousandthsRound( number ) {
+  return( Math.round( number * 1000 ) / 1000 );
 }
 
 // reset input field

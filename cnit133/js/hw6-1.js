@@ -45,12 +45,12 @@ function roundToTenthsToFixed( number ) {
 
 // round number to nearest hundredth
 function roundToHundredthsFloor( number ) {
-  return( Math.floor( number * 100 + .5 ) / 100 );
+  return( Math.floor( number * 100 + .5 ) / 100 ).toFixed(2);
 }
 
 // round number to nearest thousandth
 function roundToThousandthsRound( number ) {
-  return( Math.round( number * 1000 ) / 1000 );
+  return( Math.round( number * 1000 ) / 1000 ).toFixed(3);
 }
 
 // reset input field

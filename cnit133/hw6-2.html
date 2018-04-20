@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -19,6 +18,12 @@
 
     <!-- Custom styles for this template -->
     <link href="docs/sticky-footer-navbar.css" rel="stylesheet">
+
+    <style>
+      #errOut {
+        color: red;
+      }
+    </style>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -82,11 +87,13 @@
       </div>
       <p class="lead">Part 2 - String method charAt</p>
 
+      <div id ="errOut"></div>
+
       <form name="myForm">
 
          <p>
             Enter several lines of text: <br>
-            <input id="stringToSearch" type="text" cols="30" rows="8">
+            <textarea id="stringToSearch" type="text" rows="4" cols="30"></textarea>
             <br><br>
 
             Enter a character to search for: <br>
@@ -95,8 +102,8 @@
             <input type="reset" value="Reset" onClick="location.reload();">
             <br><br>
 
-            Occurrences of search character in Mary had a little lamb: <br>
-            <textarea cols="30" rows="1" id="output"></textarea>
+            Occurrences of search character in the text: <br>
+            <textarea cols="30" rows="1" id="output" readonly></textarea>
          </p>
       </form>
 

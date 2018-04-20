@@ -19,13 +19,11 @@ function parseNumber() {
     // clear error message
     document.getElementById("errOut").innerHTML = "";
 
-    var tokens = phoneNumber.split(/\(|\)|\-/); // split phone number into tokens
-    var areaCode = tokens[1]; // area code is first token
-    var first3 = tokens[2].substr(1, 3); // first 3 digits are second token
-    var last4 = tokens[3]; // last 4 digits are third token
+    var tokens = phoneNumber.split(/\ |\-/); // split phone number into tokens
+    var areaCode = tokens[0]; // area code is first token
+    var digits7 = tokens[1] + "-" + tokens[2]; // 7 digits are second token
 
     document.getElementById("areaCode").innerHTML = areaCode;
-    document.getElementById("first3").innerHTML = first3;
-    document.getElementById("last4").innerHTML = last4;
+    document.getElementById("digits7").innerHTML = digits7;
   }
 }

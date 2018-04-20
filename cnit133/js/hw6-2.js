@@ -14,6 +14,7 @@ function search() {
 
   if (stringToSearch == "" || key =="") {
     document.getElementById("errOut").innerHTML = errMsg; // display error message
+    document.getElementById("output").value = "";
   }
 
   // display number of occurences of the character if found in the string

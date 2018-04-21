@@ -95,9 +95,9 @@
         document.writeln( "Current local date and time: " + current.toString() +
                           "<br>Current local date and time using locale conventions: " + current.toLocaleString() +
                           "<br>Current UTC date and time:</b> " + current.toUTCString() +
-                          "<br>Hours difference between PDT and UTC time zones: " +
+                          "<br>Hours difference between PST/PDT and UTC time zones: " +
                           (current.getTimezoneOffset() / 60) +
-                          "<br>Hours difference between EDT and UTC time zones: " +
+                          "<br>Hours difference between EST/EDT and UTC time zones: " +
                           (current.getTimezoneOffset() / 60 - 3)
                         );
         </script>

@@ -13,14 +13,14 @@ $(document).ready(function () {
             // display it with a sliding down motion,
             // and when done, add the "close" class to the h2 element.
             answer.slideDown(function () {
-                p.addClass("hide");
+                p.addClass("coverClose");
             });
         }
         else {
             // Otherwise, fade the answer out, and when done,
             // remove the "close" class from the h2 element.
             answer.slideUp(function () {
-                p.removeClass("hide");
+                p.removeClass("coverClose");
             });
         }
     });

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="CNIT 133 Homework 7">
+    <meta name="author" content="Ryan Wong">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+    <title>CNIT 133 Homework 7 Object Model and Miscellaneous jQuery</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="docs/bootstrap.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="docs/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="docs/sticky-footer-navbar.css" rel="stylesheet">
+
+    <link href="css/hw7-1.css" rel="stylesheet">
+
+    <script src="https://getbootstrap.com/docs/3.3/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="js/hw7-1.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- <a class="navbar-brand" href="#">Project name</a> -->
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <!-- <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li> -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assignments <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://ryanscottwong.github.io/cnit133/hw2.html">Hw2</a></li>
+                <li><a href="https://ryanscottwong.github.io/cnit133/hw3.html">Hw3</a></li>
+                <li><a href="https://ryanscottwong.github.io/cnit133/hw4.html">Hw4</a></li>
+                <li><a href="https://ryanscottwong.github.io/cnit133/hw5.html">Hw5</a></li>
+                <li><a href="https://ryanscottwong.github.io/cnit133/hw6.html">Hw6</a></li>
+                <li><a href="https://ryanscottwong.github.io/cnit133/hw7.html">Hw7</a></li>
+                <li><a href="https://ryanscottwong.github.io/cnit133/hw8.html">Hw8</a></li>
+                <!-- <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li> -->
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <p>
+          <a href="hw7-1.html">Part 1</a> -
+          <a href="hw7-2.html">Part 2</a> -
+          <a href="hw7-3.html">Part 3</a>
+        </p>
+        <h1>CNIT 133 Homework 7 Object Model and Miscellaneous jQuery</h1>
+      </div>
+      <p class="lead">Part 1 - User selects page layout and formatting with className</p>
+      <form id="themeForm">
+    <h3>CSS class</h3>
+    <table id="themeTable" border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Theme</th>
+        </tr>
+        <tr>
+            <td>
+                <label><input type="radio" name="theme" value="theme1" id="theme1">Theme 1 (Lucida, Linen,
+                    80%)</label><br>
+                <label><input type="radio" name="theme" value="theme2" id="theme2">Theme 2 (Arial, Light Cyan,
+                    90%)</label><br>
+                <label><input type="radio" name="theme" value="theme3" id="theme3">Theme 3 (Georgia, Misty Rose,
+                    85%)</label><br>
+                <label><input type="radio" name="theme" value="" id="none" checked>None</label><br>
+            </td>
+        </tr>
+    </table>
+    <button type="button" id="resetAll">Reset All</button>
+</form>
+
+<form id="attributeForm">
+    <h3>CSS attribute (overrides theme)</h3>
+    <table id="attributeTable" border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Font Family</th>
+            <th>Background Color</th>
+            <th>Font Size</th>
+            <th>Letters and Words</th>
+        </tr>
+        <tr>
+            <td>
+                <label><input type="radio" name="font-family" value='"Comic Sans MS", cursive, sans-serif'
+                              id="comicSans">Comic Sans MS</label><br>
+                <label><input type="radio" name="font-family" value="Tahoma, Geneva, sans-serif"
+                              id="tahoma">Tahoma</label><br>
+                <label><input type="radio" name="font-family" value='"Trebuchet MS", Helvetica, sans-serif'
+                              id="trebuchet">Trebuchet MS</label><br>
+                <label><input type="radio" name="font-family" value="Verdana, Geneva, sans-serif"
+                              id="verdana">Verdana</label><br>
+                <label><input type="radio" name="font-family" value=""
+                              id="fontFamilyDefault" checked>Default</label>
+            </td>
+            <td>
+                <label><input type="radio" name="background-color" value="Azure"
+                              id="azure">Azure</label><br>
+                <label><input type="radio" name="background-color" value="Honeydew"
+                              id="honeydew">Honeydew</label><br>
+                <label><input type="radio" name="background-color" value="Ivory"
+                              id="ivory">Ivory</label><br>
+                <label><input type="radio" name="background-color" value="Lavender"
+                              id="lavender">Lavender</label><br>
+                <label><input type="radio" name="background-color" value=""
+                              id="bgColorDefault" checked>Default</label>
+            </td>
+            <td>
+                <label for="fontSize">Select one:</label><br>
+                <select name="font-size" size="5" id="fontSize">
+                    <option value="80%">80%</option>
+                    <option value="90%">90%</option>
+                    <option value="100%">100%</option>
+                    <option value="110%">110%</option>
+                    <option value="" selected>Default</option>
+                </select>
+            </td>
+            <td>
+                <label><input type="checkbox" name="font-weight" value="bold" id="boldCheck">bold</label><br>
+                <label><input type="checkbox" name="font-style" value="italic" id="italicCheck">italic</label><br>
+                <label><input type="checkbox" name="font-variant" value="small-caps"
+                              id="smallCapsCheck">small-caps</label><br>
+                <label><input type="checkbox" name="text-decoration" value="underline"
+                              id="underlineCheck">underline</label><br>
+                <label><input type="checkbox" name="letter-spacing" value="-1px" id="tight">tight</label>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<br style="clear: both">
+
+<div id="sampleText">
+    <h2>The Gettysburg Address</h2>
+
+    <p>Four score and seven years ago our fathers brought forth on this continent a new nation, conceived in liberty,
+        and dedicated to the proposition that all men are created equal.</p>
+
+    <p>Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so
+        dedicated, can long endure. We are met on a great battlefield of that war. We have come to dedicate a portion of
+        that field, as a final resting place for those who here gave their lives that that nation might live. It is
+        altogether fitting and proper that we should do this.</p>
+
+    <p>But, in a larger sense, we can not dedicate, we can not consecrate, we can not hallow this ground. The brave men,
+        living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world
+        will little note, nor long remember what we say here, but it can never forget what they did here. It is for us
+        the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so
+        nobly advanced. It is rather for us to be here dedicated to the great task remaining before us that from these
+        honored dead we take increased devotion to that cause for which they gave the last full measure of devotion that
+        we here highly resolve that these dead shall not have died in vain that this nation, under God, shall have a new
+        birth of freedom and that government of the people, by the people, for the people, shall not perish from the
+        earth.</p>
+</div>
+
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted"><a href="mailto:rwong116@mail.ccsf.edu">Ryan Wong</a>
+        <script>
+        var dateModified = document.lastModified;
+        mydate = dateModified.slice(0,16);
+        document.write("updated " + mydate);
+        </script>
+        <a href="https://validator.w3.org/check?uri=referer"><img style="border:0;width:31px;height:31px" src="https://www.w3.org/html/logo/img/mark-word-icon.png" alt="Valid HTML5"></a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer?profile=css3"><img style="border:0;width:22px;height:31px" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="Valid CSS"></a>
+      </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/3.3/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://getbootstrap.com/docs/3.3/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

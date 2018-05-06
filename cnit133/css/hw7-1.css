@@ -1,23 +1,19 @@
-  #errOut {
-    color: red;
-  }
-
 /* Define three CSS classes corresponding to "themes" */
 .theme1 {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    background-color: Linen;
-    font-size: .8em;
+    font-family: "Times New Roman", serif;
+    background-color: GhostWhite;
+    font-size: .95em;
 }
 
 .theme2 {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: AliceBlue;
+    font-family: "Courier New", monospaced;
+    background-color: Ivory;
     font-size: .9em;
 }
 
 .theme3 {
-    font-family: Georgia, serif;
-    background-color: MistyRose;
+    font-family: "Comic Sans MS", sans-serif;
+    background-color: FloralWhite;
     font-size: .85em;
 }
 
@@ -25,7 +21,7 @@
 #sampleText {
     margin: 10px 30px;
     padding: 0 10px;
-    border: 3px ridge gray;
+    border: 1px ridge black;
 }
 
 #themeForm, #attributeForm {
@@ -42,12 +38,12 @@ h1, h2, h3 {
 }
 
 table {
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 th {
     color: white;
-    background-color: darkslategray;
+    background-color: black;
     text-align: left;
 }
 

@@ -14,6 +14,11 @@ $(document).ready(
         $("#sampleText").css($(this).attr("name"), $(this).val());
     });
 
+    // Attach a click event handler to the font weight selection box
+    $("#fontWeight").change(function () {
+        $("#sampleText").css($(this).attr("name"), $(this).val());
+    });
+
     // Attach a click event handler to the checkboxes in the attribute selection table
     $("#attributeTable :checkbox").change(function () {
         $("#sampleText").css($(this).attr("name"), this.checked ? $(this).val() : "");
@@ -28,6 +33,9 @@ $(document).ready(
         // Reset the select box by setting the value to ""
         $("#fontSize").val("");
 
+        // Reset the select box by setting the value to ""
+        $("#fontWeight").val("");
+
         // Remove any class already set, and set the class to the one selected.
         $("#sampleText").removeClass().addClass($(this).val());
     });
@@ -37,6 +45,7 @@ $(document).ready(
         $("#themeTable [checked]").click(); // Clicks theme table elements that have a checked attribute
         $("#attributeTable [checked]").click(); // Clicks attribute table elements that have a checked attribute
         $("#fontSize").val(""); // Selects the font-size that has a value of ""
+        $("#fontWeight").val(""); // Selects the font-weight that has a value of ""
         $("#attributeTable :checked").click(); // Clicks all the checkboxes that are checked (to uncheck them)
     });
 });

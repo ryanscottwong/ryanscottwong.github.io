@@ -1,0 +1,57 @@
+  #errOut {
+    color: red;
+  }
+
+/* Define three CSS classes corresponding to "themes" */
+.theme1 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background-color: Linen;
+    font-size: .8em;
+}
+
+.theme2 {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: AliceBlue;
+    font-size: .9em;
+}
+
+.theme3 {
+    font-family: Georgia, serif;
+    background-color: MistyRose;
+    font-size: .85em;
+}
+
+/* The following CSS is just for basic layout and appearance */
+#sampleText {
+    margin: 10px 30px;
+    padding: 0 10px;
+    border: 3px ridge gray;
+}
+
+#themeForm, #attributeForm {
+    float: left;
+    margin-left: 30px;
+}
+
+input[type='radio'] {
+    margin: 0 5px 0 0;
+}
+
+h1, h2, h3 {
+    margin: 10px 0;
+}
+
+table {
+    background-color: whitesmoke;
+}
+
+th {
+    color: white;
+    background-color: darkslategray;
+    text-align: left;
+}
+
+button {
+    margin-top: 10px;
+    font-size: .8em;
+}
